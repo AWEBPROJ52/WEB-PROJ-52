@@ -1,27 +1,27 @@
 // Reveal element effect
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry);
+entries.forEach((entry) => {
+    console.log(entry);
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show', 'show-2');
-        } else {
-            entry.target.classList.remove('show', 'show-2');
-        }
-    });
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show', 'show-2');
+    } else {
+        entry.target.classList.remove('show', 'show-2');
+    }
+});
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // LIVE number
-let currentValue = 250000000000; // Starting value (1 billion)
-let incrementRate = 10000000; 
+let liveNumber = 250000000000; // Starting number (250 billion)
 
 function updateLiveNumber() {
-    currentValue += (incrementRate / 60); // Increment per frame (assuming frame rate is 60)
-    document.getElementById('money').textContent = formatNumber(currentValue); // Element in which number will appear
-    requestAnimationFrame(updateLiveNumber);
+    liveNumber += Math.random() * 5000000; // Increase by a random amount for a realistic effect
+    // Element where the number will be shown.
+    document.getElementById('money').textContent = formatNumber(liveNumber);
+        
 }
 
 function formatNumber(number) {
@@ -32,32 +32,34 @@ function formatNumber(number) {
     }).format(number);
 }
 
-updateLiveNumber(); // Start updating
+setInterval(updateLiveNumber, 1000); // Update every second
+
+document.getElementById('money').textContent = formatNumber(liveNumber);
 
 // THIS WHOLE SCRIPT DOESN'T WORK. It'll be worked on later.
 /**/ 
 const swiper = new Swiper('.card-wrapper', {
-    loop: true,
+loop: true,
 
-    // Functionality for the buttons
-    navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
+// Functionality for the buttons
+navigation: {
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev',
+},
+
+
+breakpoints: {
+    0: {
+        slidesPerView: 1
     },
 
+    768: {
+        slidesPerView: 2
+    },
 
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-
-        768: {
-            slidesPerView: 2
-        },
-
-        1080: {
-            slidesPerView: 3
-        },
-    }
+    1080: {
+        slidesPerView: 3
+    },
+}
 });
 /* */
