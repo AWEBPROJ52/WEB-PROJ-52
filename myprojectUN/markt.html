@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .asset-info {
+            width: 60%;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .chart-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #e0e0e0;
+            margin: 20px 0;
+        }
+        .time-filters button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer;
+        }
+        .order-box {
+            width: 35%;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .order-box h2 {
+            margin-top: 0;
+        }
+        .order-box button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+        }
+        .buy {
+            background: green;
+            color: white;
+        }
+        .sell {
+            background: red;
+            color: white;
+        }
+        .cta {
+            background: #ddd;
+        }
+        footer {
+            width: 100%;
+            background: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="asset-info">
+            <h1>Asset Name</h1>
+            <p class="price">21.4$</p>
+            <div class="chart-placeholder"></div>
+            <div class="time-filters">
+                <button>1D</button><button>1W</button><button>1M</button>
+                <button>3M</button><button>1Y</button><button>5Y</button>
+                <button>YTD</button><button>ALL</button>
+            </div>
+        </div>
+        <div class="order-box">
+            <h2>Your Order</h2>
+            <p>Lorem ipsum <button>Options</button></p>
+            <p>Lorem ipsum <input type="text" placeholder="Input field"></p>
+            <p>Lorem ipsum dolor sit <strong>12.34$</strong></p>
+            <p>Lorem ipsum <strong>10.34$</strong></p>
+            <p class="order-description">Lorem ipsum dolor sit amet...</p>
+            <button class="buy">BUY</button>
+            <button class="sell">SELL</button>
+            <button class="cta">Lorem ipsum dolor sit</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <div class="section">
+                <h3>Trading</h3>
+                <p>Markets > Insights > Brokerage ></p>
+            </div>
+            <div class="section">
+                <h3>News</h3>
+                <p>Economic > Business > Corporate ></p>
+            </div>
+            <div class="section">
+                <h3>Wealth Management</h3>
+                <p>Personal > Enterprise > Corporate ></p>
+            </div>
+            <div class="section">
+                <h3>About Us</h3>
+                <p>Our Story > Careers ></p>
+            </div>
+            <div class="section">
+                <h3>Contact Us</h3>
+                <p>Inquiries > Help & FAQ’s ></p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <p>© 2025 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
