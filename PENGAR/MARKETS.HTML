@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <!-- will switch to using the external style sheet soon-->
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            background: #f8f8f8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo-placeholder {
+            width: 50px;
+            height: 30px;
+            background: #ccc;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+        .header-right span {
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .header-right span img {
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px auto;
+        }
+        .asset-info {
+            width: 60%;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .chart-container {
+            width: 100%;
+            height: 200px; /* Reduced height */
+            background: #e0e0e0;
+            margin: 20px 0;
+        }
+        .time-filters button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer;
+        }
+        .order-box {
+            width: 35%;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .order-box h2 {
+            margin-top: 0;
+        }
+        .order-box button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+        }
+        .buy {
+            background: green;
+            color: white;
+        }
+        .sell {
+            background: red;
+            color: white;
+        }
+        .cta {
+            background: #ddd;
+        }
+        footer {
+            width: 100%;
+            background: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>  
+</head>
+<body>
+    <header class="header">
+        <div class="logo-placeholder"></div>
+        <div class="header-right">
+            <span><img src="media/MARKETS/search_icon.jpg" alt="Search"> Search</span>
+            <span><img src="media/MARKETS/user-icon.png" alt="Sign In"> sign in</span>
+            <div class="divider"></div>
+            <span><img src="media/MARKETS/menu_icon.png" alt="Menu"> Menu</span>
+        </div>
+    </header>
+    <div class="container">
+        <div class="asset-info">
+            <h1>Asset Name</h1>
+            <p class="price">$</p>
+            <div class="chart-container">
+                <canvas id="marketChart"></canvas>
+            </div>
+            <div class="time-filters">
+                <button>1D</button><button>1W</button><button>1M</button>
+                <button>3M</button><button>1Y</button><button>5Y</button>
+                <button>YTD</button><button>ALL</button>
+            </div>
+        </div>
+        <div class="order-box">
+            <h2>Your Order</h2>
+            <p>Lorem ipsum <button>Options</button></p>
+            <p>Lorem ipsum <input type="text" placeholder="Input field"></p>
+            <p>Lorem ipsum dolor sit <strong>$</strong></p>
+            <p>Lorem ipsum <strong>$</strong></p>
+            <p class="order-description">Lorem ipsum dolor sit amet...</p>
+            <button class="buy">BUY</button>
+            <button class="sell">SELL</button>
+            <button class="cta">Lorem ipsum dolor sit</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <div class="section">
+                <h3>Trading</h3>
+                <p>Markets > Insights > Brokerage ></p>
+            </div>
+            <div class="section">
+                <h3>News</h3>
+                <p>Economic > Business > Corporate ></p>
+            </div>
+            <div class="section">
+                <h3>Wealth Management</h3>
+                <p>Personal > Enterprise > Corporate ></p>
+            </div>
+            <div class="section">
+                <h3>About Us</h3>
+                <p>Our Story > Careers ></p>
+            </div>
+            <div class="section">
+                <h3>Contact Us</h3>
+                <p>Inquiries > Help & FAQ’s ></p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <p>© 2025 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- will switch to using external js file later -->
+    <script>
+        var ctx = document.getElementById('marketChart').getContext('2d');
+        var marketChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Price Trend',
+                    data: [10, 12, 8, 15, 9, 14],
+                    borderColor: 'green',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
