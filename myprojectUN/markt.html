@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="styel.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Page</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+  <header>
+    <nav>
+        <div id = "nav_menu">
+        
+         <!--LOGO-->
+            <div id ="logo">
+                 <a href="HOME.HTML"><img src="media/MISC/logo.jpg" alt="Company Logo" class ="logo"></a>
+            </div>
+            <div id = "nav_items">
+                <ul>
+                <li><button class="search_button">
+                    <span class="material-symbols-outlined">search</span>
+                    <span class="text">Search</span>
+                    </button>
+                </li>
+                <li><button class="signin_button">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text">Sign in</span>
+                    </button>
+                </li>
+                <li class="vertical_line"></li>
+
+                <li><button class="menu_button">
+                    <span class="material-symbols-outlined">menu</span>
+                    <span class="text">Menu</span>
+                    </button>
+                </ul>
+             </div>
+        
+        </div>
+
+
+    
+    </nav>
+
+        <div class="*"></div>
+        <div class="body, html"></div>
+        <div class="#wrapper"></div>
+        <div class="nav"></div>
+
+        <div class="#nav_menu "></div>
+
+        <div class="#logo"></div>
+        <div class="#logo img"></div>
+        <div class="#nav_items"></div>
+        <div class="#nav_items ul li.vertical_line"></div>
+        <div class="#nav_items ul li"></div>
+        <div class="#nav_items ul li button "></div>
+        <div class="#nav_items ul li button:hover  "></div>
+        <div class="#nav_items ul li button.search_button "></div>
+        <div class="#nav_items ul li button.search_button .material-symbols-outlined "></div>
+        <div class="#nav_items ul li button.signin_button "></div>
+        <div class="#nav_items ul li button.signin_button .material-symbols-outlined"></div>
+        <div class="#nav_items ul li button.menu_button "></div>
+        <div class="#nav_items ul li button.menu_button .material-symbols-outlined "></div>
+        
+    </header>
+    <div class="container">
+        <div class="asset-info">
+            <h1>Asset Name</h1>
+            <p class="price">$</p>
+            <div class="chart-container">
+                <canvas id="marketChart"></canvas>
+            </div>
+        </div>
+        <div class="order-box">
+            <h2>Your Order</h2>
+            <div class="row">
+                <span>Lorem ipsum</span>
+                <button>Options</button>
+            </div>
+            <div class="row">
+                <span>Lorem ipsum</span>
+                <button>Input field</button>
+            </div>
+            <div class="row">
+                <span>Lorem ipsum dolor sit</span>
+                <span>12.34$</span>
+            </div>
+            <div class="row bold">
+                <span>Lorem ipsum</span>
+                <span>10.34$</span>
+            </div>
+            <p style="font-size: 20px; text-align: left;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur aliquet id, faucibus et urna.
+            </p>
+            <div class="btn-container">
+                <button>BUY</button>
+                <button>SELL</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <div class="section">
+                <h3>Trading</h3>
+                <p>Markets > Insights > Brokerage ></p>
+            </div>
+            <div class="section">
+                <h3>News</h3>
+                <p>Economic > Business > Corporate ></p>
+            </div>
+            <div class="section">
+                <h3>Wealth Management</h3>
+                <p>Personal > Enterprise > Corporate ></p>
+            </div>
+            <div class="section">
+                <h3>About Us</h3>
+                <p>Our Story > Careers ></p>
+            </div>
+            <div class="section">
+                <h3>Contact Us</h3>
+                <p>Inquiries > Help & FAQ’s ></p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <p>© 2025 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        var ctx = document.getElementById('marketChart').getContext('2d');
+        var marketChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Price Trend',
+                    data: [10, 12, 8, 15, 9, 14],
+                    borderColor: 'green',
+                    borderWidth: 3,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+ 
+    </script>
+</body>
+</html>
