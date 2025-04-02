@@ -3,10 +3,556 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Create Account</title>
     <link href = "style.css" rel = "stylesheet" type = text/css>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-placeholder {
+            width: 150px;
+            height: 40px;
+            background-color: #2c3e50;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-bar input {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 14px;
+            width: 200px;
+        }
+        
+        .top-nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .top-nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .top-nav a:hover {
+            color: #4ca1af;
+        }
+        
+        .account-icon {
+            font-size: 16px;
+        }
+        
+        .menu-divider {
+            color: #ddd;
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Main Content Wrapper */
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Content Section */
+        .content-section {
+            display: flex;
+            flex: 1;
+        }
+        
+        /* Form Section */
+        .form-section {
+            flex: 1;
+            padding: 60px 40px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 0 20px 20px 0;
+        }
+        
+        /* Form Styles */
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .name-fields {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .name-fields .form-group {
+            flex: 1;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            padding-left: 15px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px 25px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background-color: #f9f9f9;
+        }
+        
+        input:focus {
+            border-color: #4ca1af;
+            box-shadow: 0 0 0 3px rgba(76, 161, 175, 0.2);
+            outline: none;
+            background-color: white;
+        }
+        
+        /* Specific style for the register button only */
+        form button[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 20px; /* Reduced padding to make button smaller */
+            font-size: 14px; /* Smaller font size */
+            border-radius: 30px;
+            cursor: pointer;
+            width: 50%; /* Made button narrower */
+            font-weight: 500;
+            transition: all 0.3s;
+            margin: 10px auto 0; /* Centered the button */
+            letter-spacing: 0.5px;
+            display: block; /* Needed for margin auto to work */
+        }
+        
+        form button[type="submit"]:hover {
+            background-color: #1a252f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Image Section */
+        .image-section {
+            flex: 1;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px 0 0 20px;
+        }
+        
+        .image-placeholder {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            z-index: 2;
+        }
+        
+        .image-placeholder i {
+            font-size: 100px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .image-placeholder h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .image-placeholder p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        /* Footer Navigation */
+        .footer-container {
+            background-color: white;
+            padding: 40px;
+            border-top: 1px solid #eee;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.02);
+            position: relative;
+        }
+        
+        .footer-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .nav-section ul {
+            list-style: none;
+        }
+        
+        .nav-section li {
+            margin-bottom: 10px;
+        }
+        
+        .nav-section a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-section a:hover {
+            color: #4ca1af;
+        }
+        
+        .nav-section a::after {
+            content: ">";
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        
+        /* Footer Images */
+        .footer-image-left {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            background-color: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 12px;
+        }
+        
+        .social-media {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .instagram { background-color: #e1306c; }
+        .linkedin { background-color: #0077b5; }
+        
+        /* Divider Line */
+        .content-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 0 40px;
+            position: relative;
+        }
+        
+        .content-divider::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -5px;
+            width: 40px;
+            height: 10px;
+            background-color: #4ca1af;
+            border-radius: 5px;
+        }
+        
+        /* Decorative Elements */
+        .image-section::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .image-section::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .search-bar input {
+                width: 150px;
+            }
+            
+            .content-section {
+                flex-direction: column;
+            }
+            
+            .form-section, .image-section {
+                border-radius: 0;
+            }
+            
+            .image-section {
+                padding: 60px 20px;
+            }
+            
+            input {
+                padding: 12px 20px;
+            }
+            
+            .name-fields {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            form button[type="submit"] {
+                width: 100%; /* Full width on mobile */
+            }
+            
+            .footer-nav {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .top-nav {
+                display: none;
+            }
+            
+            .footer-image-left,
+            .social-media {
+                position: static;
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            .footer-image-left {
+                margin-right: auto;
+                margin-left: 0;
+            }
+            
+            .social-media {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="main-wrapper">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-placeholder">LOGO</div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <nav class="top-nav">
+                    <a href="#"><i class="account-icon">👤</i> Sign In</a>
+                    <span class="menu-divider">|</span>
+                    <a href="#">Menu</a>
+                </nav>
+                <div class="menu-toggle">☰</div>
+            </div>
+        </header>
+        
+        <!-- Main Content Section -->
+        <div class="content-section">
+            <!-- Left Section - Form -->
+            <section class="form-section">
+                <h1>Create account</h1>
+                
+                <form>
+                    <div class="name-fields">
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" id="firstName" placeholder="John">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" placeholder="Doe">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john.doe@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="repeatPassword">Repeat password</label>
+                        <input type="password" id="repeatPassword" placeholder="••••••••">
+                    </div>
+                    
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+            
+            <!-- Right Section - Image Placeholder -->
+            <section class="image-section">
+                <div class="image-placeholder">
+                    <i>📈</i>
+                    <h2>Stay Ahead of the Market</h2>
+                    <p>Join our community of investors and get access to exclusive market insights, real-time data, and expert analysis to make informed decisions.</p>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Divider Line -->
+        <div class="content-divider"></div>
+        
+        <!-- Footer Navigation -->
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <div class="nav-section">
+                    <h3>Trading</h3>
+                    <ul>
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">Brokerage</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>News</h3>
+                    <ul>
+                        <li><a href="#">Economic</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Corporate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Wealth management</h3>
+                    <ul>
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>About us</h3>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Contact us</h3>
+                    <ul>
+                        <li><a href="#">Inquiries</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- Bottom Left Image -->
+            <div class="footer-image-left">
+                Partner Logo
+            </div>
+            
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <div class="social-icon facebook">f</div>
+                <div class="social-icon twitter">t</div>
+                <div class="social-icon instagram">i</div>
+                <div class="social-icon linkedin">in</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
