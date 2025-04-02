@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #00008B;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #0000fd, #050df5);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #f0f0f4, #a8d0ff);
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(0, 0, 139, 0.3);
+        }
+        
+        .nav-links a.active {
+            background-color: rgba(126, 200, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(2px);
+        }
+        
+        .business-header {
+            text-align: center;
+            padding: 20px 0 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .business-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 25%;
+            width: 50%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #00008B, transparent);
+        }
+        
+        .business-title {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #00008B;
+        }
+        
+        .article {
+            display: flex;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 3px solid rgba(0, 0, 139, 0.2);
+        }
+        
+        .article:last-child {
+            border-bottom: none;
+        }
+        
+        .article-image {
+            width: 50%;
+            padding-right: 30px;
+        }
+        
+        .article-image img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .article-image img:hover {
+    transform: scale(1.05);
+}
+        
+        .article-content {
+            width: 50%;
+        }
+        
+        .article h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #00008B;
+        }
+        
+        .article p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #00008B;
+        }
+        
+        .see-more {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid #00008B;
+            color: #00008B;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .see-more:hover {
+            background-color: #00008B;
+            color: white;
+        }
+        
+        .top-story {
+            font-size: 28px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid rgba(0, 0, 139, 0.3);
+            color: #00008B;
+        }
+        
+        /* Wireframe Grid */
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+        
+        .wireframe-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .wireframe-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .wireframe-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .wireframe-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .wireframe-item h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #00008B;
+            display: flex;
+            align-items: center;
+        }
+        
+        .wireframe-item h2::after {
+            content: ">";
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        
+        .wireframe-item p {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .wireframe-center {
+            grid-column: 2;
+            grid-row: span 2;
+        }
+        
+        .wireframe-center .wireframe-image {
+            height: 350px;
+        }
+        
+        .wireframe-center h2 {
+            font-size: 24px;
+        }
+        
+        .editors-picks {
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .editors-picks h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #00008B;
+            margin-left: 80px;
+        }
+        
+        .editors-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .carousel-item {
+            min-width: 150px;
+            flex: 0 0 auto;
+            transition: all 0.3s ease;
+            
+        }
+        
+        .carousel-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .carousel-image {
+            width: 150px;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-image:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 139, 0.2);
+
+        }
+        
+        .carousel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+        }
+        
+        .carousel-image img:hover {
+            transform: scale(1.1);
+        }
+        
+        .carousel-item p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .carousel-item:hover p {
+            color: #00008B;
+            font-weight: bold;
+        }
+
+         /*Other News*/
+
+        .Other-News {
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .Other-News h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #00008B;
+            margin-left: 0px;
+        }
+        
+        .Other-Newsl {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .Other-News-item {
+            min-width: 150px;
+            flex: 0 0 auto;
+            transition: all 0.3s ease;
+        }
+        
+        .Other-News-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .Other-News-image {
+            width: 190px;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .Other-News-image:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 139, 0.2);
+        }
+        
+        .Other-News-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .Other-News-image img:hover {
+            transform: scale(1.1);
+        }
+        
+        .Other-News-item p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .Other-News-item:hover p {
+            color: #00008B;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">BusinessNews</div>
+            <div class="nav-links">
+                <a href="HOME.HTML" class="active">Home</a>
+                <a href="search.html">Search</a>
+                <a href="login.html">Sign in</a>
+                <a href="menu.html">Menu</a>
+            </div>
+        </div>
+    </nav>
+        
+    <main class="container">
+        <!-- Business Header -->
+        <div class="business-header">
+            <div class="business-title"><strong>Business</strong></div>
+        </div>
+        
+        <!-- Top Story Section -->
+        <h1 class="top-story">Top story</h1>
+        
+        <div class="article">
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Top Story Image">
+            </div>
+            <div class="article-content">
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna. Curabitur eleifend consequat justo nec rhoncus. Vivamus bibendum bibendum metus, ac tempus nunc consequat eu. Nulla facilisi. Nullam pharetra enim.</p>
+                <a href="#" class="see-more">See more</a>
+            </div>
+        </div>
+        
+        <!-- Second Article -->
+        <div class="article">
+            <div class="article-content">
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna. Curabitur eleifend consequat justo nec rhoncus. Vivamus bibendum bibendum metus, ac tempus nunc consequat eu. Nulla facilisi. Nullam pharetra enim.</p>
+                <a href="#" class="see-more">See more</a>
+            </div>
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="News Image">
+            </div>
+        </div>
+        
+        <!--  Wireframe Grid -->
+        <div class="wireframe-grid">
+            <!-- Top Left Item -->
+            <div class="wireframe-item">
+                <div class="wireframe-image">
+                    <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\Don't Wait for a Market Crash to Buy These 2 Growth Stocks - Motley Fool.jpg" alt="Business news">
+                </div>
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna.</p>
+            </div>
+            
+            <!-- Center Item (Large) -->
+            <div class="wireframe-item wireframe-center">
+                <div class="wireframe-image">
+                    <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\And the winner of Startup Battlefield at Disrupt Berlin 2018 is… Legacy _ TechCrunch.jpg" alt="Finance news">
+                </div>
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna. Curabitur eleifend consequat justo nec rhoncus. Vivamus bibendum bibendum metus, ac tempus nunc consequat eu.</p>
+            </div>
+            
+            <!-- Top Right Item -->
+            <div class="wireframe-item">
+                <div class="wireframe-image">
+                    <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\All 43 Things Mark Zuckerberg Will Follow Up On for Congress.jpg" alt="Economy news">
+                </div>
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna.</p>
+            </div>
+            
+            <!-- Bottom Left Item -->
+            <div class="wireframe-item">
+                <div class="wireframe-image">
+                    <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\Here's how to use fibonacci analysis to make money in the market.jpg" alt="Tech news">
+                </div>
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna.</p>
+            </div>
+            
+            <!-- Bottom Right Item -->
+            <div class="wireframe-item">
+                <div class="wireframe-image">
+                    <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\US economy projected to expand by 2% in next 2 years_ S&P Global.jpg" alt="Investment news">
+                </div>
+                <h2>HEADLINE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sem justo, viverra consectetur adipisicing. Icuidatus et urna.</p>
+            </div>
+        </div>
+        
+        <!--  Editors Picks  -->
+        <div class="editors-picks">
+            <h2>Editors picks</h2>
+            <div class="editors-carousel">
+                <div class="Other-News-item">
+                    <div class="Other-News-image">
+                        <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\White House slaps 25% tariff on $50 billion worth of Chinese goods.jpg" alt="Editor's pick 1">
+                    </div>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\How to see Trump’s Second Term On Global Policies —.jpg">
+                    </div>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\HSBC mooted move from UK could push the brand to ‘virtually disappear’ domestically.jpg" alt="Editor's pick 3">
+                    </div>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\film&tv career.jpg" alt="Editor's pick 4">
+                    </div>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\You Won't BELIEVE What JUST Happened To Barack Obama!.jpg" alt="Editor's pick 5">
+                    </div>
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\100 Top Entrepreneurs Who Succeeded Without A College Degree.jpg" alt="Editor's pick 6">
+                    </div>
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+<hr>
+        <!-- Other-News  -->
+            <div class="Other-News">
+                <h2>Other News</h2>
+                <div class="Other-Newsl">
+                    <div class="Other-News-item">
+                        <div class="Other-News-image">
+                            <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\White House slaps 25% tariff on $50 billion worth of Chinese goods.jpg" alt="Editor's pick 1">
+                        </div>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <div class="Other-News-item">
+                        <div class="Other-News-image">
+                            <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\How to see Trump’s Second Term On Global Policies —.jpg">
+                        </div>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <div class="Other-News-item">
+                        <div class="Other-News-image">
+                            <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\HSBC mooted move from UK could push the brand to ‘virtually disappear’ domestically.jpg" alt="Editor's pick 3">
+                        </div>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <div class="Other-News-item">
+                        <div class="Other-News-image">
+                            <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\film&tv career.jpg" alt="Editor's pick 4">
+                        </div>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <div class="Other-News-item">
+                        <div class="Other-News-image">
+                            <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\You Won't BELIEVE What JUST Happened To Barack Obama!.jpg" alt="Editor's pick 5">
+                        </div>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <div class="Other-News-item">
+                        <div class="Other-News-image">
+                            <img src="C:\Users\Ahmed\Desktop\WEB-PROJ-52-main\PENGAR\Images\100 Top Entrepreneurs Who Succeeded Without A College Degree.jpg" alt="Editor's pick 6">
+                        </div>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+        </div>
+    </main>
+</body>
+</html>
