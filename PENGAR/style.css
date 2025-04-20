@@ -1,0 +1,1754 @@
+/* Start of CSS used in HOME */
+html
+{
+scroll-behavior: smooth;
+}
+#content
+{
+font-family: "Roboto", Arial, Helvetica, sans-serif;
+font-weight: 700;
+}
+#content #background 
+{
+background-image: url("media/HOME/Finnish_Nature_six.jpg");
+opacity: 0.8;
+background-position: center;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+position: absolute;
+inset: 0;
+margin: 0;
+padding: 0;
+filter: blur(0px); /*might change later, but no need for blur now*/
+}
+
+#pagefront
+{
+text-shadow: 5px 5px 37px #FAF9F6;
+color: #001538;
+margin-top: 150px;
+margin-bottom: 230px;
+font-size: 160%; 
+opacity: 1;
+text-align: center;
+}
+
+/*Numbers part*/
+#pagefront #money
+{
+text-shadow: none;
+font-size: 350%;
+}
+
+#companyName
+{
+padding-bottom: 10px;
+font-weight: 800;
+color: #2c2449;
+font-size: 120%;
+opacity: 1;
+}
+
+#description
+{
+margin-top: 3%;
+font-weight: 400;
+font-size: 150%;
+}
+
+.learn-btn
+{
+position:absolute;
+font-size: 20px;
+margin-top: 5%;
+display:inline-flex;
+flex-direction: column;
+align-items: center;
+transition-duration: 0.5s;
+color: #261e42;
+background: #fffefe75;
+padding-top: 1%; padding-bottom: 1%; padding-right: 2%; padding-left: 2%;
+border-radius: 50px;
+text-decoration: none;
+margin-left: -68px; /* Temporary fix */
+}
+
+.learn-btn::after
+{
+transition-duration: 0.5s;
+content: "arrow_downward";
+font-family: "Material Symbols Outlined";
+position:absolute;
+opacity: 0;
+}
+.learn-btn:hover
+{
+background: #fffefe;
+padding-bottom: 3%;
+}
+.learn-btn:hover::after
+{
+content: "arrow_downward";
+font-family: "Material Symbols Outlined";
+transition-duration: 0.5s;
+opacity: 1;
+padding-top: 18%;
+}
+
+#about
+{
+position: relative;
+color: #001538;
+margin: 0;
+margin-bottom: 250px;
+}
+
+#about h2
+{
+margin-left: 1.5%;
+padding-top: 150px;
+font-weight: 400;
+text-align: left;
+font-size: 250%;
+}
+
+#about p
+{
+margin-left: 1.5%;
+margin-top: 30px;
+margin-bottom: 45px;
+color: #041c44;
+line-height: 28px;
+font-weight: 350;
+font-size: 110%;
+max-width: 50%;
+}
+
+#wealth-management-solutions
+{
+position: relative;
+color: #001538;
+background-color: #faf8f5;
+padding-bottom: 150px;
+}
+
+#wealth-management-solutions h2
+{
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#wealth-management-solutions p
+{
+margin-left: 1.5%;
+padding-bottom: 4%;
+padding-left: 40%;
+color: #041c44;
+line-height: 28px;
+font-weight: 350;
+font-size: 110%;
+max-width: 80%;
+}
+
+/* Button function in the HOME page */
+.page-btn, .btn-text
+{
+display:inline-flex;
+align-items: center;
+gap: 8px;
+position:relative;
+transition-duration: 0.5s;
+color: #041c44;
+background: transparent;
+text-decoration: none;
+}
+
+.page-btn .btn-text
+{
+text-decoration: underline;
+text-decoration-thickness: 1%;
+text-decoration-skip-ink: all;
+}
+.material-symbols-outlined
+{
+transition-duration: 0.3s;
+}
+
+.page-btn:hover .material-symbols-outlined, .page-btn:hover .btn-text
+{
+font-weight: 500;
+transform: translateX(10px);
+text-decoration-thickness: 10%;
+text-decoration-skip-ink: all;
+}
+/* Button function in the HOME page */
+
+.option-list .option-item 
+{
+list-style: none;
+display:inline-flex;
+flex-direction: column;
+margin: 40px;
+}
+
+.option-list .option-item .option-link
+{
+height: 150px;
+width: 150px;
+display: block;
+background-color: beige;
+padding: 18px;
+border-radius: 20px;
+}
+.option-list .option-link .option-image
+{
+height: 150px;
+width: 150px;
+aspect-ratio: 16/9;
+object-fit: cover;
+border-radius: 10px;
+}
+
+.option-list .option-link .option-button
+{
+height: 35px;
+width: 35px;
+border-radius: 50%;
+}
+
+.swiper-prev
+{
+position: absolute;
+top: 60%;
+border-radius: 50px;
+cursor: pointer;
+left: 88%
+}
+
+.swiper-next
+{
+position: absolute;
+top: 60%;
+border-radius: 50px;
+cursor: pointer;
+left: 90%;
+}
+
+.swiper2-prev
+{
+position: absolute;
+top: 25%;
+border-radius: 50px;
+cursor: pointer;
+left: 88%
+}
+
+.swiper2-next
+{
+position: absolute;
+top: 25%;
+border-radius: 50px;
+cursor: pointer;
+left: 90%;
+}
+
+#historic-performance
+{
+position: relative;
+color: #001538;
+background: #dee8ee75;
+}
+
+#historic-performance h2
+{
+padding-top: 100px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#countries
+{
+position: relative;
+color: #001538;
+background: #faf8f5;
+}
+
+#countries h2
+{
+padding-top: 100px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#countries p
+{
+margin-top: 1.5%;
+margin-left: 1.5%;
+color: #041c44;
+line-height: 28px;
+font-weight: 350;
+font-size: 130%;
+max-width: 45%;
+}
+
+#active-investing
+{
+position: relative;
+color: #001538;
+background: #faf8f5;
+}
+
+#active-investing h2
+{
+padding-bottom: 30px;
+padding-top: 50px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#active-investing p
+{
+margin-left: 1.5%;
+margin-bottom: 40px;
+color: #041c44;
+line-height: 28px;
+font-weight: 350;
+font-size: 110%;
+max-width: 50%;
+}
+
+#top-story
+{
+display: inline-block;
+position: relative;
+color:#FFF8DC;
+background: #0c1072;
+}
+
+#top-story h1
+{
+margin: 0;
+padding-top: 30px;
+text-align: center;
+position: relative;
+color: #FFF8DC;
+background: inherit;
+}
+
+#top-story h2
+{
+padding-bottom: 30px;
+padding-top: 50px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#top-story p
+{
+margin-left: 1.5%;
+margin-top: 20px;
+color: aliceblue;
+line-height: 28px;
+font-weight: 350;
+font-size: 110%;
+max-width: 60%;
+}
+
+#crypto-coins
+{
+float: right;
+max-height: 30%;
+max-width: 30%;
+margin-right: 7%;
+}
+
+#other-news
+{
+position: relative;
+color:#FFF8DC;
+background: #0c1072;
+padding-bottom: 150px;
+}
+
+#other-news h2
+{
+padding-bottom: 30px;
+padding-top: 50px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#other-news p
+{
+margin-left: 1.5%;
+margin-bottom: 40px;
+color: aliceblue;
+line-height: 28px;
+font-weight: 350;
+font-size: 110%;
+max-width: 50%;
+}
+
+.page-btn-color2, .color2-btn-text
+{
+display:inline-flex;
+align-items: center;
+gap: 8px;
+position:relative;
+transition-duration: 0.5s;
+color: aliceblue;
+background: transparent;
+text-decoration: none;
+}
+
+.page-btn-color2 .color2-btn-text
+{
+font-size: 40%;
+text-decoration: underline;
+text-decoration-thickness: 1%;
+text-decoration-skip-ink: all;
+}
+.material-symbols-outlined
+{
+transition-duration: 0.3s;
+}
+
+.page-btn-color2:hover .material-symbols-outlined, .page-btn-color2:hover .color2-btn-text
+{
+font-weight: 500;
+transform: translateX(10px);
+text-decoration-thickness: 10%;
+text-decoration-skip-ink: all;
+}
+
+/* Start of CSS used in NAV */
+
+/*improves styling for ALL elements on page, and impoves text visibility*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; /*for mac os i guess (not needed)*/
+    text-rendering: optimizeLegibility;
+    
+}
+
+/* Styling for the body and wrapper and header to remove invis padding*/
+body, html {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /*max-width: auto;*/ /* (This rule apparently was checked as an error on W3C validator -E ), (its fine to remove if it doesnt break anything -A) */
+    overflow-x: hidden; /*stops scrolling on x axis*/
+}
+
+#wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Header and navigation bar styling */
+header {
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(7px); /* Blurs the background */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adds a small border */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    font-size: 16px; /* Font size for the header */
+    font-weight: 300; /* Font weight for the header */
+    line-height: 28px;
+    z-index: 1000; /* so it stays on top of other elements */
+    background-clip: padding-box; /* so blur doesnt effect border */
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+/* centering the div... (finally) */
+#nav_menu {
+    display: flex;
+    align-items: center; /* up and down */
+    justify-content: space-between; /* left and right */
+    height: 70px;
+    width: auto;
+    height: 100%;
+    flex-grow: 1; /* Makes it take up all available space */
+    padding: 16px 32px; /* Adds padding all around */
+    box-sizing: border-box;
+}
+
+/* Logo */
+#logo {
+    display: flex;
+    align-items: center; /* up and down */
+    justify-content: center; /* left and right */
+    height: 57px;
+    width: 150px;
+}
+
+.link-area {
+    display: flex;
+    align-items: center;  /* vertical alignment */
+    justify-content: center;  /* horizontal alignment  */
+    height: 57px;
+    width: 140px;
+    overflow: hidden;
+}
+
+/* nav items */
+#nav_items {
+    display: flex;
+    align-items: center; 
+    width: 443px; /* Width of the navigation items container */
+    height: 57px; /* Height of the navigation items container */
+    justify-content: flex-end;
+}
+
+/* Removing the bullet points aswell*/
+#nav_items ul {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: center; /* Horizontally centers the items */
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    gap: 21px; /* Space between the items */
+    width: 100%;
+    height: 100%;
+}
+
+/* Vertical line */
+#nav_items ul li.vertical_line {
+    width: 0.9px;
+    min-width:0.9px;
+    height: 28px;
+    border: 0.8px; 
+    background-color: rgba(0, 0, 0, 0.3);  /* subtle dark color */
+    margin: 0;
+    padding: 0;
+    pointer-events: none;  /* makes it non-interactive */
+    user-select: none;     /* prevents text selection */
+    align-self: center;   
+}
+#nav_items ul li {
+    display: flex; /* Enables flexbox layout for child alignment */
+    align-items: center; /* Vertically centers the button */
+    justify-content: center; /* Horizontally centers the button */
+    width: 133px; /* Fixed width for each list item */
+    height: 52px; /* Fixed height for each list item */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav_items ul li button {
+    all: unset; /* Resets default button styles because i started out useing anchor tags instead of buttons*/
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #000000; 
+    font-weight: 420; 
+    font-size: 18px; 
+    line-height: 20px; 
+    padding: 12px 24px; /* Matches the padding of links (clickable aswell= */
+    width: 133px;
+    height: 28px;
+    background-color: transparent; 
+    border: none; 
+    border-radius: 30px; /* Matches the rounded corners of links (after) */
+    cursor: pointer; /* Adds a pointer cursor for buttons */
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease; /* Matches the hover effect of links */
+}
+
+/* Hover effect for buttons ( I had to changed to buttons from links so i had to make them the same) */
+#nav_items ul li button:hover {
+    color: #000000; /* Matches the hover color of links */
+    background-color: rgba(0, 0, 0, 0.1); /* Matches the hover background of links */
+    border-radius: 50px; /* Matches the hover rounded corners of links (before) */
+}
+
+/* Search button specific styling */
+#nav_items ul li button.search_button {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    width: 133px;
+    height: 52px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+
+#nav_items ul li button.search_button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* Sign in button specific styling */
+#nav_items ul li button.signin_button {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    width: 133px;
+    height: 52px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+
+#nav_items ul li button.signin_button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* Menu button specific styling */
+#nav_items ul li button.menu_button {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    width: 133px;
+    height: 52px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+
+#nav_items ul li button.menu_button .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* STAR OF STYLING FOR HIDDEN CLASS (HOME)*/
+
+.hidden 
+{
+opacity: 0;
+transform: translateY(50px); /* Moves elements down slightly */
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible, fade and slide in */
+.show 
+{
+opacity: 1;
+transform: translateY(0);
+}
+
+.show-2 
+{
+transition-delay: 0.1s;
+}
+
+/*START IF STYLING IN FOOTER*/
+ 
+#footer
+{
+    width: 100%;
+    height: 350px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #faf8f5;
+    white-space: nowrap;
+}
+
+
+ 
+#logo_footer {
+    min-width: 230px; 
+}
+ 
+#footer_lists
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+ 
+#footer_lists ul {
+    list-style: none;
+    color: #000000;
+    padding: 0; 
+    margin: 0; 
+}
+ 
+#footer_lists ul li {
+    margin-bottom: 30px; 
+}
+#footer_lists h3 {
+    margin-bottom: 40px; 
+}
+ 
+/*changing to buttons*/
+ 
+#footer_lists ul li button {
+    background-color: transparent; 
+    border: none; 
+    color: #000; 
+    font-size: 16px; 
+    font-family: inherit; 
+    cursor: pointer; 
+    padding: 0; 
+    text-align: left; 
+}
+ 
+/* Styling the footer buttons */
+#footer_lists ul li button {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: transparent; 
+    border: none; 
+    color: #000; 
+    font-size: 16px; 
+    font-family: inherit; 
+    padding: 0px 0px; /* Padding for the button */
+    text-align: left;
+}
+ 
+/* Styling the text span */
+#footer_lists ul li button .text {
+    flex-grow: 1; 
+    text-align: left; 
+    text-decoration: underline;
+    text-decoration-thickness: 0.1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    transition: text-decoration-color 0.2s ease;
+}
+ 
+#footer_lists ul li button:hover .text {
+    text-decoration-color: rgba(0, 0, 0, 1); 
+    text-decoration-thickness: 1.1px; /*underline thickness */
+}
+ 
+/* Styling the icon*/
+#footer_lists ul li button .icon {
+    font-size: 20px; 
+    color: #000; 
+}
+ 
+/* Hover effect for the button */
+#footer_lists ul li button:hover .icon {
+    transform: translateX(4px);
+    color: #555; 
+}
+ 
+/* Styling the social icons section */
+#footer_socials {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    margin-top: 20px; 
+    width: 29%;
+}
+ 
+#footer_socials ul {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    gap: 30px; 
+}
+ 
+#footer_socials ul li {
+    margin: 0 10px; 
+    margin: 0;
+}
+ 
+#footer_socials ul li a {
+    text-decoration: none; 
+    color: #000; 
+    font-size: 20px; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+ 
+#footer_socials ul li a:hover {
+    color: #555; 
+    transform: scale(1.2); 
+}
+
+/* START OF STYLING FOR MARKETS PAGE */
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 200px;
+}
+.asset-info {
+    width: 70%;
+    height: 500px;
+}
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+.chart-container {
+    width: 100%;
+    height: 200px;
+    margin: 30px 0;
+}
+.order-box {
+    height: 500px;
+    width: 50%;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 0;
+    background: #fff;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+.bold {
+    font-weight: bold;
+}
+button {
+    padding: 8px 15px;
+    border: none;
+    background: lightgray;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.btn-container button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.large-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: lightgray;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+footer {
+    width: 100%;
+    background: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*START OF STYLING IN BUSINESS NEWS*/
+
+/* NEWS PAGE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #f0f0f4, #a8d0ff);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 139, 0.3);
+}
+
+.nav-links a.active {
+    background-color: rgba(126, 200, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(2px);
+}
+
+.business-header {
+    text-align: center;
+    padding: 20px 0 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.business-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00008B, transparent);
+}
+
+.business-title {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #00008B;
+}
+
+.article {
+    display: flex;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 3px solid rgba(0, 0, 139, 0.2);
+}
+
+.article:last-child {
+    border-bottom: none;
+}
+
+.article-image {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.article-image img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.article-image img:hover {
+    transform: scale(1.05);
+}
+
+.article-content {
+    width: 50%;
+}
+
+.article h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #00008B;
+}
+
+.article p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #00008B;
+}
+
+.see-more {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #00008B;
+    color: #00008B;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.see-more:hover {
+    background-color: #00008B;
+    color: white;
+}
+
+.top-story {
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(0, 0, 139, 0.3);
+    color: #00008B;
+}
+
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.wireframe-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.wireframe-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.wireframe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wireframe-image img:hover {
+    transform: scale(1.05);
+}
+
+.wireframe-item h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #00008B;
+    display: flex;
+    align-items: center;
+}
+
+.wireframe-item h2::after {
+    content: ">";
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.wireframe-item p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.wireframe-center {
+    grid-column: 2;
+    grid-row: span 2;
+}
+
+.wireframe-center .wireframe-image {
+    height: 350px;
+}
+
+.wireframe-center h2 {
+    font-size: 24px;
+}
+
+.editors-picks {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.editors-picks h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00008B;
+    margin-left: 80px;
+}
+
+.editors-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.carousel-item {
+    min-width: 150px;
+    flex: 0 0 auto;
+    transition: all 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-image {
+    width: 150px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.carousel-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 139, 0.2);
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image img:hover {
+    transform: scale(1.1);
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+.carousel-item:hover p {
+    color: #00008B;
+    font-weight: bold;
+}
+
+.Other-News {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.Other-News h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00008B;
+    margin-left: 0px;
+}
+
+.Other-Newsl {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.Other-News-item {
+    min-width: 150px;
+    flex: 0 0 auto;
+    transition: all 0.3s ease;
+}
+
+.Other-News-item:hover {
+    transform: translateY(-5px);
+}
+
+.Other-News-image {
+    width: 190px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.Other-News-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 139, 0.2);
+}
+
+.Other-News-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.Other-News-image img:hover {
+    transform: scale(1.1);
+}
+
+.Other-News-item p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+.Other-News-item:hover p {
+    color: #00008B;
+    font-weight: bold;
+}
+
+/* NEWS PAGE SPECIFIC STYLES */
+.news-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.news-nav {
+    background: linear-gradient(135deg, #0000fd, #050df5);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.news-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #f0f0f4, #a8d0ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.news-nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.news-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.news-nav-links a:hover {
+    background-color: rgba(0, 0, 139, 0.3);
+}
+
+.news-nav-links a.active {
+    background-color: rgba(126, 200, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(2px);
+}
+
+.news-article {
+    display: flex;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 3px solid rgba(0, 0, 139, 0.2);
+}
+
+.news-article:last-child {
+    border-bottom: none;
+}
+
+.news-article-image {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.news-article-image img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.news-article-image img:hover {
+    transform: scale(1.05);
+}
+
+.news-article-content {
+    width: 50%;
+}
+
+.news-article h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #00008B;
+}
+
+.news-article p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #00008B;
+}
+
+.news-see-more {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #00008B;
+    color: #00008B;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.news-see-more:hover {
+    background-color: #00008B;
+    color: white;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.news-grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-grid-item .wireframe-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.news-grid-item .wireframe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-grid-item .wireframe-image img:hover {
+    transform: scale(1.05);
+}
+
+.news-grid-item h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #00008B;
+    display: flex;
+    align-items: center;
+}
+
+.news-grid-item h2::after {
+    content: ">";
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.news-grid-item p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.news-grid-center {
+    grid-column: 2;
+    grid-row: span 2;
+}
+
+.news-grid-center .wireframe-image {
+    height: 350px;
+}
+
+.news-grid-center h2 {
+    font-size: 24px;
+}
+
+.news-picks {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.news-picks h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00008B;
+    margin-left: 80px;
+}
+
+.news-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.news-carousel-item {
+    min-width: 150px;
+    flex: 0 0 auto;
+    transition: all 0.3s ease;
+}
+
+.news-carousel-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-carousel-item .carousel-image {
+    width: 150px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.news-carousel-item .carousel-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 139, 0.2);
+}
+
+.news-carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-carousel-item img:hover {
+    transform: scale(1.1);
+}
+
+.news-carousel-item p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+.news-carousel-item:hover p {
+    color: #00008B;
+    font-weight: bold;
+}
+
+.related-news {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.related-news h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00008B;
+    margin-left: 0;
+}
+
+.related-news-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.related-news-item {
+    min-width: 190px;
+    flex: 0 0 auto;
+    transition: all 0.3s ease;
+}
+
+.related-news-item:hover {
+    transform: translateY(-5px);
+}
+
+.related-news-item .Other-News-image {
+    width: 190px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.related-news-item .Other-News-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 139, 0.2);
+}
+
+.related-news-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.related-news-item img:hover {
+    transform: scale(1.1);
+}
+
+.related-news-item p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+.related-news-item:hover p {
+    color: #00008B;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/*START OF STYLING IN SIGN IN*/
+
+
+
+/* Main Content Wrapper */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content Section */
+.content-section {
+    display: flex;
+    flex: 1;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    padding: 60px 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Form Styles - Specific to form-section */
+.form-section h1 { /* Modified for specificity */
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.name-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    padding-left: 15px;
+}
+
+.form-section input { /* Modified for specificity */
+    width: 100%;
+    padding: 15px 25px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+.form-section input:focus { /* Modified for specificity */
+    border-color: #4ca1af;
+    box-shadow: 0 0 0 3px rgba(76, 161, 175, 0.2);
+    outline: none;
+    background-color: white;
+}
+
+/* Specific style for the register button only within a form */
+form button[type="submit"] {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Reduced padding to make button smaller */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 30px;
+    cursor: pointer;
+    width: 50%; /* Made button narrower */
+    font-weight: 500;
+    transition: all 0.3s;
+    margin: 10px auto 0; /* Centered the button */
+    letter-spacing: 0.5px;
+    display: block; /* Needed for margin auto to work */
+}
+
+form button[type="submit"]:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+}
+
+.image-placeholder {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.image-placeholder i {
+    font-size: 100px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.image-placeholder h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.image-placeholder p {
+    font-size: 16px;
+    opacity: 0.9;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Divider Line */
+.content-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 0 40px;
+    position: relative;
+}
+
+.content-divider::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 40px;
+    height: 10px;
+    background-color: #4ca1af;
+    border-radius: 5px;
+}
+
+/* Decorative Elements */
+.image-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.image-section::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .form-section, .image-section {
+        border-radius: 0;
+    }
+
+    .image-section {
+        padding: 60px 20px;
+    }
+
+    .form-section input { /* Modified for specificity */
+        padding: 12px 20px;
+    }
+
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    form button[type="submit"] {
+        width: 100%; /* Full width on mobile */
+    }
+}
+/* --- End of styles extracted and modified for pasting --- */
