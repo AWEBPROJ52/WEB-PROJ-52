@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengar</title>
+    <!-- DO NOT FORGET TO CHANGE THE FAVICON TO THE LOGO ONCE ITS READY -->
+    <link rel="icon" type="image/x-icon" href="/media/MISC/logo.ico">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- World Map library necessary files -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script> 
+    <!-- Linking material fonts (symbols) from google and font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <!-- Lines 10 to 12 are linking the Roboto font. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet" type = text/css> 
+</head>
+<body>
+    <div id = "wrapper">
+        <header>
+        
+            <nav>
+                <div id = "nav_menu">
+                
+                 <!--LOGO-->
+                    <div id ="logo">
+                         <a href="HOME.HTML" class = "link-area"><img src="media/MISC/logo.png" alt="Company Logo" class ="logo" height = 150 width = 150></a>
+                    </div>
+                    <div id = "nav_items">
+                        <ul>
+                        <li><button class="search_button">
+                            <span class="material-symbols-outlined">search</span>
+                            <span class="text">Search</span>
+                            </button>
+                        </li>
+                        <li><button class="signin_button">
+                            <span class="material-symbols-outlined">person</span>
+                            <span class="text">Sign in</span>
+                            </button>
+                        </li>
+                        <li class="vertical_line"></li>
+    
+                        <li><button class="menu_button">
+                            <span class="material-symbols-outlined">menu</span>
+                            <span class="text">Menu</span>
+                            </button>
+                        </ul>
+                     </div>
+                
+                </div>
+    
+    
+            
+            </nav>
+       
+    </header>
+        <main id = "main-content">
+            <div id = "content">
+                <br><br><br><br><br><br><br><br>
+                <div id = "expert-analysis">
+                    <video autoplay loop muted> <source src = "media/MARKETS/insights/experts_analyzing.mp4"> </video>
+                </div>
+                <div class = "landing-section hidden"  >
+                    
+                     <h3>Expert insights</h3>
+                     <p> Our experts offer valuable point-in-time opinions on relevant issues and opportunities as active responsible investors. Our organization is renowned for being responsive and insightful to our partners.</p> <br>
+                     <p> To ensure the stability of our wealth management, we offer request specific insights on demand through our email. </p>
+                     <!-- Email link-->
+                     <div class = "email-btn"><a id = "email-insight" href = "mailto:eyad260727@bue.edu.eg"> <span> Reach out for special insights </span> <span class="material-symbols-outlined"> <span class="material-symbols-outlined">
+                        arrow_forward
+                        </span> </span> </a></div>
+                </div> <hr style = "opacity: 0.5; margin-top: 300px;">
+
+                <div id = "prev-recommendations" class = "hidden"> 
+                    <h1> Previous insights our experts participated in </h1>
+                  <div id = "insights-2024"> 
+                    <h2> 2024 </h2>
+                    <ul class = "link-list">
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = insight-link> <a href = "https://www.binance.com/en/square/post/5659019280337"> Crypto market predictions for 2024 <span class ="material-symbols-outlined">chevron_right</span></a> </div>
+                        </li>
+
+                        <li>
+                           <hr style = "opacity: 0.5; margin-top: 30px;">
+                           <div class = insight-link> <a href = "https://russellinvestments.com/us/blog/qtr-q2-2024"> A rising tide: Q2 2024 trading report <span class="icon material-symbols-outlined">chevron_right</span> </a>  </div>
+                        </li>
+
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = "insight-link"><a href = "https://www.reuters.com/markets/risk-is-back-menu-sovereign-public-funds-survey-shows-2024-12-05/"> Shift towards private markets attracts investment <span class="icon material-symbols-outlined">chevron_right</span></a></div>
+                        </li>
+
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = "insight-link"><a href = "https://www.financemagnates.com/forex/analysis/top-financial-trends-to-watch-in-quarter-3-2024"> Regulation developments in cryptocurrency markets<span class="icon material-symbols-outlined">chevron_right</span></a></div>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                        </li>
+                    </ul>
+                  </div> 
+
+                  <div id = "insights-2023"> 
+                    <h2 style = "margin-top: 140px;"> 2023 </h2>
+                    <ul class = "link-list">
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = insight-link> <a href = "https://www.forbes.com/sites/ronshevlin/2022/02/22/embedded-finance-is-fueling-a-25-billion-banking-as-a-service-baas-opportunity/?sh=1dd27d4a55d5"> Embedded finance gaining momentum <span class ="material-symbols-outlined">chevron_right</span></a> </div>
+                        </li>
+
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = "insight-link"><a href = "https://www.investopedia.com/nterest-rates-inflation-push-consumer-sentiment-lower-for-4th-straight-month-8400535"> High interest rates in risk of record high inflation<span class="icon material-symbols-outlined">chevron_right</span></a></div>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                        </li>
+                    </ul>
+
+                    
+                  </div> 
+                </div>
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div id="footer">
+                    <div id="logo_footer">
+                       <a href = "HOME.HTML"><img src="media/MISC/logo.png" alt="Company Logo" class="logo" height = 200 width = 200></a> 
+                    </div>
+           
+                    <div id="footer_lists">
+                        <!-- Trading Section -->
+                        <div id="footer_list1">
+                            <h3>Trading</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='MARKETS.HTML'">
+                                        <span class="text">Markets</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='INSIGHTS.HTML'">
+                                        <span class="text">Insights</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='BROKERAGE.HTML'">
+                                        <span class="text">Brokerage</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- News Section -->
+                        <div id="footer_list2">
+                            <h3>News</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='ECONOMIC.HTML'">
+                                        <span class="text">Economic</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='BUSINESS.HTML'">
+                                        <span class="text">Business</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='CORPORATE.HTML'">
+                                        <span class="text">Corporate</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- Wealth Management Section -->
+                        <div id="footer_list3">
+                            <h3>Wealth Management</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='PERSONAL.HTML'">
+                                        <span class="text">Personal</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='ENTERPRISE.HTML'">
+                                        <span class="text">Enterprise</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- About Us Section -->
+                        <div id="footer_list4">
+                            <h3>About us</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='OUR_STORY.HTML'">
+                                        <span class="text">Our story</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='CAREERS.HTML'">
+                                        <span class="text">Careers</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- Contact Us Section -->
+                        <div id="footer_list5">
+                            <h3>Contact us</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='INQUIRIES.HTML'">
+                                        <span class="text">Inquiries</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='HELP.HTML'">
+                                        <span class="text">Help & FAQ</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+           
+                    <div id="footer_socials">
+                      <ul>
+           
+                          <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                          <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+           
+                    </ul>
+                    </div>
+            </div>
+        </main>
+    </div>
+
+<script src="javascript/nav.js"></script>
+<script src = "javascript/app.js"></script>
+
+</body>
+</html>
