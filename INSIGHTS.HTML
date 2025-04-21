@@ -76,10 +76,143 @@
                      <div class = "email-btn"><a id = "email-insight" href = "mailto:eyad260727@bue.edu.eg"> <span> Reach out for special insights </span> <span class="material-symbols-outlined"> <span class="material-symbols-outlined">
                         arrow_forward
                         </span> </span> </a></div>
-                </div> <hr style = "opacity: 0.5; margin-top: 300px;">
+                </div> <hr style = "opacity: 0.5;">
+                <div id = "insight-impact" class = "hidden">
+                    <h2> Impact of our insights</h2>
+                    <p> Our insights have helped corporations as well as individuals sustain and grow their wealth </p>
+                    <div class = "card-container">
+                        <div class = "card">
+                            <div id = "saudi-stock"><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                                <canvas id="saudistock" style = "height: 180px; width: 420px;"></canvas>
+                                
+                                <script>
+                                    var ctx = document.getElementById("saudistock");
+                                    var saudistock = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2021, 2022, 2023, 2024],
+                                            datasets: [{
+                                                data: [20, 23, 22.5, 26.8],
+                                                borderColor: "rgba(0,0,255, 0.4)",
+                                                backgroundColor: "rgba(88, 101, 242, 0.5)",
+                                                hoverBorderColor: "rgba(38, 30, 66, 1)",
+                                                fill: false
+                                            }]
+                                        },
+                                        options: {
+                                            legend: {display: false},
+                                            title: {
+                                                display: true,
+                                                text: "Performance Over Time for Tamara (billion$)"
+                                                },  
+                                            responsive: true,
+                                            maintainAspectRatio: true,
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero: true
+                                                    }
+                                                }],
+                                            }
+                                        }
+                                    });
+                                </script>
+                                    </div>
+                            <div class = "card-content">
+                                <h3>Growth of our partner <br> Tamara </h3>
+                                <p> Since its start, Tamara has always been an important partner for us. Our partner Tamara keeps sustaining its wealth. </p>
+                            </div>
+                        </div>
+
+                        <div class = "card">
+                            <div id = "amman-stock-exchange-graph">
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <canvas id="amman-stock-exchange" style = "height: 180px; width: 420px;"></canvas>
+            
+            <script>
+            const xValues = [2020,2021,2022,2023,2024];
+            const yValues = [25.30,32.2,34,36.3, 39.1 ,40.5];
+            
+            new Chart("amman-stock-exchange", {
+              type: "bar",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  fill: true,
+                  backgroundColor: "rgba(88, 101, 242, 0.5)",
+                  borderColor: "rgba(0,0,255, 0.4)",
+                  hoverBorderColor: "rgba(38, 30, 66, 1)",
+                  data: yValues
+                }]
+              },
+              options: {
+                legend: {display: false},
+                title: {
+                    display: true,
+                    text: "Performance Over Time for Amman Stock Exchange (billion$)"
+                },
+                scales: {
+                  xAxes: [{
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [{ticks: {min: 0, max:40}}],
+                  gridLines: {
+                    drawTicks: false,
+                    drawBorder: false
+                  }
+                }
+              }
+            });
+            </script>
+                
+                            </div>
+            
+                            <div class = "card-content">
+                                <h3>Growth of our partner <br> Amman Stock Exchange</h3>
+                                <p> As our partner started investing closely with us, our close relations and cooperations ensured a sustained revenue. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> </div> <hr style = "opacity: 0.5;">
+                <div id = "insights" class = "hidden">
+                    <h2> Press releases</h2>
+                    <p> Recent press releases regarding our investments </p>
+                    <div class = "card-container">
+                        <div class = "card">
+                            <a href = "https://finviz.com/map.ashx?t=sec" target = "_blank"><img src = "media/MARKETS/insights/market_crash.png"></a>
+                            <div class = "card-content">
+                                <h3>US Market crash</h3>
+                                <p> Experts elucidate "From an economic perspective, the US trading policy does not make sense." <br> Our experts strongly advice against any short-term investment in the US. </p>
+                            </div>
+                        </div>
+
+                        <div class = "card">
+                            <a href = "https://www.tradingview.com/symbols/BTCUSD/?timeframe=YTD" target = _blank><img src = "media/NEWS/bitcoin_stocks.jpg"></a>
+                            <div class = "card-content">
+                                <h3>Bitcoin price to USD</h3>
+                                <p> As Bitcoin price plummets our organization allocates more funds for investment in hopes for a greater revenue once it hits its inevitable surge. We do not recommend investing sizable amounts of money. </p>
+                            </div>
+                        </div>
+
+                        <div class = "card">
+                            <a href = "https://risingauto-jo.com/" target="_blank"><img src = "media/MARKETS/insights/renewable_energy.webp"></a>
+                            <div class = "card-content">
+                                <h3>Renewable energy investment</h3>
+                                <p> Investment in renewable energy is gaining more momentum as more companies based around EVs rise and attract investors. Investment in renewable energy is a lucrative safe option. <br> Our experts reccomend investing in Rising Auto Tech, an EV manufacturer. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <hr style = "opacity: 0.5;">
 
                 <div id = "prev-recommendations" class = "hidden"> 
-                    <h1> Previous insights our experts participated in </h1>
+                    <h1> Related insights our experts participated in </h1>
                   <div id = "insights-2024"> 
                     <h2> 2024 </h2>
                     <ul class = "link-list">
@@ -126,21 +259,6 @@
                 </div>
                 
                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <div id="footer">
                     <div id="logo_footer">
                        <a href = "HOME.HTML"><img src="media/MISC/logo.png" alt="Company Logo" class="logo" height = 200 width = 200></a> 
