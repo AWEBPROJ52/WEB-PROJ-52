@@ -2831,7 +2831,7 @@ color: #041c44;
 .text-wrapper
 {
 background: #041c44;
-padding-bottom: 350px;
+padding-bottom: 330px;
 padding-top: 50px;
 }
 .text-wrapper img 
@@ -2861,7 +2861,7 @@ max-width: 50%;
 }
 .text-wrapper-second .text-box
 {
-    max-width: 90%;
+max-width: 90%;
 }
 .text-box h2 
 {
