@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengar</title>
+    <!-- DO NOT FORGET TO CHANGE THE FAVICON TO THE LOGO ONCE ITS READY -->
+    <link rel="icon" type="image/x-icon" href="/media/MISC/logo.ico">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- World Map library necessary files -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script> 
+    <!-- Linking material fonts (symbols) from google and font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <!-- Lines 10 to 12 are linking the Roboto font. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet" type = text/css> 
+</head>
+<body>
+    <div id = "wrapper">
+        <header>
+        
+            <nav>
+                <div id = "nav_menu">
+                
+                 <!--LOGO-->
+                    <div id ="logo">
+                         <a href="HOME.HTML" class = "link-area"><img src="media/MISC/logo.png" alt="Company Logo" class ="logo" height = 150 width = 150></a>
+                    </div>
+                    <div id = "nav_items">
+                        <ul>
+                        <li><button class="search_button">
+                            <span class="material-symbols-outlined">search</span>
+                            <span class="text">Search</span>
+                            </button>
+                        </li>
+                        <li><button class="signin_button">
+                            <span class="material-symbols-outlined">person</span>
+                            <span class="text">Sign in</span>
+                            </button>
+                        </li>
+                        <li class="vertical_line"></li>
+    
+                        <li><button class="menu_button">
+                            <span class="material-symbols-outlined">menu</span>
+                            <span class="text">Menu</span>
+                            </button>
+                        </ul>
+                     </div>
+                
+                </div>
+    
+    
+            
+            </nav>
+       
+    </header>
+        <main id = "main-content">
+            <div id = "content">
+                <br><br><br><br><br><br><br><br>
+                <div id = "our-vision">
+                    <video autoplay loop muted> <source src = "media/MARKETS/insights/moneys.mp4"> Your browser doesn't support HTML5 video.</video>
+                </div>
+                <div class = "landing-section-enterprise">
+                <h3>Our reach</h3>
+                <p> Our goal is to be the leading large investment fund in the world, so we need the best people on our team. We are always on the lookout for top investors, tech talents and other skilled professionals both in Norway and abroad, and we offer fantastic opportunities for students and recent graduates. </p>
+           </div>
+            <hr style = "opacity: 0.5;">
+
+                <div id = "form-wrapper">
+                    <div class = "form-container hidden">
+                        <form action = "#">
+                            <h2>Collaborate with us</h2>
+                            <div class = "form-group-row hidden">
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i> <span class="material-symbols-outlined"> corporate_fare </span> </i>
+                                    <label for = ""> Company Name</label>
+                                </div>
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i><span class="material-symbols-outlined">domain</span></i>
+                                    <label for = ""> Department Name</label>
+                                </div>
+                            </div>
+                            <div class = "form-group-row hidden">
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i><span class="material-symbols-outlined">
+                                        mail
+                                        </span></i>
+                                    <label for = ""> Contact Email </label>
+                                </div>
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i><span class="material-symbols-outlined">
+                                        mail
+                                        </span></i>
+                                    <label for = ""> Confirm Contact Email </label>
+                                </div>
+                            </div>
+                            <div class = "form-group-row hidden">
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i><span class="material-symbols-outlined">
+                                        contact_mail
+                                        </span></i>
+                                    <label for = ""> Representative Name </label>
+                                </div>
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i><span class="material-symbols-outlined">
+                                        groups
+                                        </span></i>
+                                    <label for = ""> Company Size </label>
+                                </div>
+                            </div>
+                                <div class = "form-group-singular hidden">
+                                <div class = "form-group">
+                                    <input type = "text" required>
+                                    <i><span class="material-symbols-outlined">
+                                        storefront
+                                        </span></i>
+                                    <label for = ""> Business Type </label>
+                                </div>
+                                </div>
+                                <button type = "register" class = "collab-btn">Let's Collaborate</button>
+                                <div class = "link">
+                                    <p> Hesitant? <a href = "INSIGHTS.HTML" class = "signup"> Check our Insights</a></p>
+                                </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                </div>
+                
+                
+            
+                <div id="footer">
+                    <div id="logo_footer">
+                       <a href = "HOME.HTML"><img src="media/MISC/logo.png" alt="Company Logo" class="logo" height = 200 width = 200></a> 
+                    </div>
+           
+                    <div id="footer_lists">
+                        <!-- Trading Section -->
+                        <div id="footer_list1">
+                            <h3>Trading</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='MARKETS.HTML'">
+                                        <span class="text">Markets</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='INSIGHTS.HTML'">
+                                        <span class="text">Insights</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='BROKERAGE.HTML'">
+                                        <span class="text">Brokerage</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- News Section -->
+                        <div id="footer_list2">
+                            <h3>News</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='ECONOMIC.HTML'">
+                                        <span class="text">Economic</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='BUSINESS.HTML'">
+                                        <span class="text">Business</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='CORPORATE.HTML'">
+                                        <span class="text">Corporate</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- Wealth Management Section -->
+                        <div id="footer_list3">
+                            <h3>Wealth Management</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='PERSONAL.HTML'">
+                                        <span class="text">Personal</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='ENTERPRISE.HTML'">
+                                        <span class="text">Enterprise</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- About Us Section -->
+                        <div id="footer_list4">
+                            <h3>About us</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='OUR_STORY.HTML'">
+                                        <span class="text">Our story</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='CAREERS.HTML'">
+                                        <span class="text">Careers</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+           
+                        <!-- Contact Us Section -->
+                        <div id="footer_list5">
+                            <h3>Contact us</h3>
+                            <ul>
+                                <li>
+                                    <button onclick="location.href='INQUIRIES.HTML'">
+                                        <span class="text">Inquiries</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onclick="location.href='HELP.HTML'">
+                                        <span class="text">Help & FAQ</span>
+                                        <span class="icon material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+           
+                    <div id="footer_socials">
+                      <ul>
+           
+                          <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                          <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+           
+                    </ul>
+                    </div>
+            </div>
+        </main>
+    </div>
+
+<script src="javascript/nav.js"></script>
+<script src = "javascript/app.js"></script>
+
+</body>
+</html>
