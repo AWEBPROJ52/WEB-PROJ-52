@@ -15,7 +15,7 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // LIVE number
-let liveNumber = 250000000000; // Starting number (250 billion)
+let liveNumber = 250303402962; // Starting number (250 billion)
 
 function updateLiveNumber() {
     liveNumber += Math.random() * 5000000; // Increase by a random amount for a realistic effect
@@ -36,7 +36,7 @@ setInterval(updateLiveNumber, 1000); // Update every second
 
 document.getElementById('money').textContent = formatNumber(liveNumber);
 
-// THIS WHOLE SCRIPT DOESN'T WORK. It'll be worked on later.
+// THIS WHOLE SCRIPT DOESN'T WORK. It'll be worked on later. (i fixed it dont worry :) -A)
 /**/ 
 const swiper = new Swiper('.card-wrapper', {
 loop: true,
