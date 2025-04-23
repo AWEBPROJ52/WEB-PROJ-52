@@ -5,8 +5,6 @@ entries.forEach((entry) => {
 
     if (entry.isIntersecting) {
         entry.target.classList.add('show', 'show-2');
-    } else {
-        entry.target.classList.remove('show', 'show-2');
     }
 });
 });
@@ -36,30 +34,3 @@ setInterval(updateLiveNumber, 1000); // Update every second
 
 document.getElementById('money').textContent = formatNumber(liveNumber);
 
-// THIS WHOLE SCRIPT DOESN'T WORK. It'll be worked on later. (i fixed it dont worry :) -A)
-/**/ 
-const swiper = new Swiper('.card-wrapper', {
-loop: true,
-
-// Functionality for the buttons
-navigation: {
-    nextEl: '.swiper-next',
-    prevEl: '.swiper-prev',
-},
-
-
-breakpoints: {
-    0: {
-        slidesPerView: 1
-    },
-
-    768: {
-        slidesPerView: 2
-    },
-
-    1080: {
-        slidesPerView: 3
-    },
-}
-});
-/* */
