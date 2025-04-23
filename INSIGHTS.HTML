@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pengar</title>
+        <!-- DO NOT FORGET TO CHANGE THE FAVICON TO THE LOGO ONCE ITS READY -->
+        <link rel="icon" type="image/x-icon" href="/media/MISC/logo.ico">
+        <!-- Slider -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <!-- World Map library necessary files -->
+        <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+        <script
+            src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+        <script
+            src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+        <!-- Linking material fonts (symbols) from google and font awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+        <!-- Lines 10 to 12 are linking the Roboto font. -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type=text/css>
+        <!-- jQuery (required for Slick) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <!-- Slick CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+        <!-- Slick JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </head>
+<body>
+    <div id = "wrapper">
+        <header>
+        
+            <nav>
+                <div id="nav_menu">
+
+                    <!--LOGO-->
+                    <div id="logo">
+                        <a href="HOME.HTML" class="link-area"><img
+                                src="media/MISC/logo.png" alt="Company Logo"
+                                class="logo" height=150 width=150></a>
+                    </div>
+                    <div id="nav_items">
+                        <ul>
+                            <li><button class="search_button">
+                                    <span class="material-symbols-outlined">search</span>
+                                    <span class="text">Search</span>
+                                    <input type="text" class="search-input" placeholder="Search...">
+                                </button>
+                            </li>
+                            <li><button class="signin_button">
+                                    <span
+                                        class="material-symbols-outlined">person</span>
+                                    <span class="text">Sign in</span>
+                                </button>
+                            </li>
+                            <li class="vertical_line"></li>
+
+                            <li><button class="menu_button">
+                                    <span
+                                        class="material-symbols-outlined menu-icon">menu</span>
+                                    <span
+                                        class="material-symbols-outlined close-icon">close</span>
+                                    <span class="text menu-text">Menu</span>
+                                    <span
+                                        class="text close-text">Close</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+       
+    </header>
+    <div id="main-overlay" class="overlay">
+        <div class="overlay-content">
+            <div class="overlay-menu-sections">
+                <ul class="main-menu-list">
+                    <li class="menu-item" data-submenu="wealth-management"><button><span class="text">Wealth
+                                management</span><span
+                                class="material-symbols-outlined arrow-icon">chevron_right</span></button></li>
+                    <li class="menu-item" data-submenu="trading"><button><span class="text">Trading</span><span
+                                class="material-symbols-outlined arrow-icon">chevron_right</span></button></li>
+                    <li class="menu-item" data-submenu="news"><button><span class="text">News</span><span
+                                class="material-symbols-outlined arrow-icon">chevron_right</span></button></li>
+                    <li class="menu-item" data-submenu="about-us"><button><span class="text">About us</span><span
+                                class="material-symbols-outlined arrow-icon">chevron_right</span></button></li>
+                    <li class="menu-item" data-submenu="contact"><button><span class="text">Contact</span><span
+                                class="material-symbols-outlined arrow-icon">chevron_right</span></button></li>
+                </ul>
+
+                <div class="popular-pages">
+                    <h3>Popular pages</h3>
+                    <ul>
+                        <li>
+                            <button
+                                onclick="location.href='MARKETS.HTML'">
+                                <span class="text">Markets</span>
+                                <span
+                                    class="icon material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onclick="location.href='BROKERAGE.HTML'">
+                                <span class="text">Brokerage</span>
+                                <span
+                                    class="icon material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onclick="location.href='PERSONAL.HTML'">
+                                <span class="text">Personal wealth
+                                    management</span>
+                                <span
+                                    class="icon material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                onclick="location.href='OUR_STORY.HTML'">
+                                <span class="text">Our story</span>
+                                <span
+                                    class="icon material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Wealth Management Submenu -->
+            <div class="overlay-submenu-content" id="wealth-management-submenu">
+                <h3>Wealth Management</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='PERSONAL.HTML'">
+                            <span class="text">Personal</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='ENTERPRISE.HTML'">
+                            <span class="text">Enterprise</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Trading Submenu -->
+            <div class="overlay-submenu-content" id="trading-submenu">
+                <h3>Trading</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='MARKETS.HTML'">
+                            <span class="text">Markets</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='INSIGHTS.HTML'">
+                            <span class="text">Insights</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='BROKERAGE.HTML'">
+                            <span class="text">Brokerage</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- News Submenu -->
+            <div class="overlay-submenu-content" id="news-submenu">
+                <h3>News</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='ECONOMIC.HTML'">
+                            <span class="text">Economic</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='BUSINESS.HTML'">
+                            <span class="text">Business</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='CORPORATE.HTML'">
+                            <span class="text">Corporate</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- About Us Submenu -->
+            <div class="overlay-submenu-content" id="about-us-submenu">
+                <h3>About Us</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='OUR_STORY.HTML'">
+                            <span class="text">Our story</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='CAREERS.HTML'">
+                            <span class="text">Careers</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Submenu -->
+            <div class="overlay-submenu-content" id="contact-submenu">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='INQUIRIES.HTML'">
+                            <span class="text">Inquiries</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='HELP.HTML'">
+                            <span class="text">Help & FAQ</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="stay-informed">
+                <h3>Stay informed</h3>
+                <div class="informed-item">
+                    <img class="informed-image" src="media/NEWS/Ethereum_coin.jpg" alt="News preview" />
+                    <div class="informed-text">
+                        <h4>Headline</h4>
+                        <p>hundreds of coins go missing as a result of a typo, is this the end of didgital currency?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <main id = "main-content">
+            <div id = "content">
+                <br><br><br><br><br><br><br><br>
+                <div id = "expert-analysis">
+                    <video autoplay loop muted> <source src = "media/MARKETS/insights/experts_analyzing.mp4"> Your browser doesn't support HTML5 video.</video>
+                </div>
+                <div class = "landing-section hidden"  >
+                    
+                     <h3>Expert insights</h3>
+                     <p> Our experts offer valuable point-in-time opinions on relevant issues and opportunities as active responsible investors. Our organization is renowned for being responsive and insightful to our partners.</p> <br>
+                     <p> To ensure the stability of our wealth management, we offer request specific insights on demand through our email. </p>
+                     <!-- Email link-->
+                     <div class = "email-btn"><a id = "email-insight" href = "mailto:eyad260727@bue.edu.eg"> <span> Reach out for special insights </span> <span class="material-symbols-outlined"> <span class="material-symbols-outlined">
+                        arrow_forward
+                        </span> </span> </a></div>
+                </div> <hr style = "opacity: 0.5;">
+                <div id = "insight-impact" class = "hidden">
+                    <h2> Impact of our insights</h2>
+                    <p> Our insights have helped corporations as well as individuals sustain and grow their wealth </p>
+                    <div class = "card-container">
+                        <div class = "card">
+                            <div id = "saudi-stock"><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                                <canvas id="saudistock" style = "height: 180px; width: 420px;"></canvas>
+                                
+                                <script>
+                                    var ctx = document.getElementById("saudistock");
+                                    var saudistock = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [2021, 2022, 2023, 2024],
+                                            datasets: [{
+                                                data: [20, 23, 22.5, 26.8],
+                                                borderColor: "rgba(0,0,255, 0.4)",
+                                                backgroundColor: "rgba(88, 101, 242, 0.5)",
+                                                hoverBorderColor: "rgba(38, 30, 66, 1)",
+                                                fill: false
+                                            }]
+                                        },
+                                        options: {
+                                            legend: {display: false},
+                                            title: {
+                                                display: true,
+                                                text: "Performance Over Time for Tamara (billion$)"
+                                                },  
+                                            responsive: true,
+                                            maintainAspectRatio: true,
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero: true
+                                                    }
+                                                }],
+                                            }
+                                        }
+                                    });
+                                </script>
+                                    </div>
+                            <div class = "card-content">
+                                <h3>Growth of our partner <br> Tamara </h3>
+                                <p> Since its start, Tamara has always been an important partner for us. Our partner Tamara keeps sustaining its wealth. </p>
+                            </div>
+                        </div>
+
+                        <div class = "card">
+                            <div id = "amman-stock-exchange-graph">
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <canvas id="amman-stock-exchange" style = "height: 180px; width: 420px;"></canvas>
+            
+            <script>
+            const xValues = [2020,2021,2022,2023,2024];
+            const yValues = [25.30,32.2,34,36.3, 39.1 ,40.5];
+            
+            new Chart("amman-stock-exchange", {
+              type: "bar",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  fill: true,
+                  backgroundColor: "rgba(88, 101, 242, 0.5)",
+                  borderColor: "rgba(0,0,255, 0.4)",
+                  hoverBorderColor: "rgba(38, 30, 66, 1)",
+                  data: yValues
+                }]
+              },
+              options: {
+                legend: {display: false},
+                title: {
+                    display: true,
+                    text: "Performance Over Time for Amman Stock Exchange (billion$)"
+                },
+                scales: {
+                  xAxes: [{
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [{ticks: {min: 0, max:40}}],
+                  gridLines: {
+                    drawTicks: false,
+                    drawBorder: false
+                  }
+                }
+              }
+            });
+            </script>
+                
+                            </div>
+            
+                            <div class = "card-content">
+                                <h3>Growth of our partner <br> Amman Stock Exchange</h3>
+                                <p> As our partner started investing closely with us, our close relations and cooperations ensured a sustained revenue. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> </div> <hr style = "opacity: 0.5;">
+                <div id = "insights" class = "hidden">
+                    <h2> Press releases</h2>
+                    <p> Recent press releases regarding our investments </p>
+                    <div class = "card-container">
+                        <div class = "card">
+                            <a href = "https://finviz.com/map.ashx?t=sec" target = "_blank"><img src = "media/MARKETS/insights/market_crash.png"></a>
+                            <div class = "card-content">
+                                <h3>US Market crash</h3>
+                                <p> Experts elucidate "From an economic perspective, the US trading policy does not make sense." <br> Our experts strongly advice against any short-term investment in the US.
+                                </p>
+                                
+                                <table>
+                                    <tr>
+                                        <th> Stock </th>
+                                        <th> USD </th>
+                                        <th> Change <br> (past year)</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td> Apple (AAPL) </td>
+                                        <td> $198.19 </td>
+                                        <td> (-9%)<span class="material-symbols-outlined">
+                                            arrow_downward
+                                            </span></td> 
+                                    </tr>
+
+                                    <tr>
+                                        <td> Microsoft (MSFT) </td>
+                                        <td> $364.61</td>
+                                        <td> (-9.07%)<span class="material-symbols-outlined">
+                                            arrow_downward
+                                            </span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> Nvidia (NVDA) </td>
+                                        <td> $98.6</td>
+                                        <td> (-28.71%)<span class="material-symbols-outlined">
+                                            arrow_downward
+                                            </span></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class = "card">
+                            <a href = "https://www.tradingview.com/symbols/BTCUSD/?timeframe=YTD" target = _blank><img src = "media/NEWS/bitcoin_stocks.jpg"></a>
+                            <div class = "card-content">
+                                <h3>Bitcoin price to USD</h3>
+                                <p> As Bitcoin price plummets our organization allocates more funds for investment in hopes for a greater revenue once it hits its inevitable surge. We do not recommend investing sizable amounts of money. </p>
+                            
+                                <table id = "crypto-table">
+                                    <tr>
+                                        <th> Cryptocurrency </th>
+                                        <th> USD </th>
+                                        <th> Prediction <br> (Next year)</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td> Bitcoin (BTC) </td>
+                                        <td> $90k </td>
+                                        <td> (+11.74%)<span class="material-symbols-outlined">
+                                            arrow_upward
+                                            </span></td> 
+                                    </tr>
+
+                                    <tr>
+                                        <td> Ethereum (ETHER) </td>
+                                        <td> $1.7K</td>
+                                        <td> (+7.03%)<span class="material-symbols-outlined">
+                                            arrow_upward
+                                            </span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> BNB (BNB) </td>
+                                        <td> $611.05</td>
+                                        <td> (+5.01%)<span class="material-symbols-outlined">
+                                            arrow_upward
+                                            </span></td>
+                                    </tr>
+                                </table>
+                            
+                            </div>
+                        </div>
+
+                        <div class = "card">
+                            <a href = "https://risingauto-jo.com/" target="_blank"><img src = "media/MARKETS/insights/renewable_energy.webp"></a>
+                            <div class = "card-content">
+                                <h3>Renewable energy investment</h3>
+                                <p> Investment in renewable energy is gaining more momentum as more companies based around EVs rise and attract investors. Investment in renewable energy is a lucrative safe option. <br> Our experts reccomend investing in Rising Auto Tech, an EV manufacturer. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <hr style = "opacity: 0.5;">
+
+                <div id = "prev-recommendations" class = "hidden"> 
+                    <h1> Related insights our experts participated in </h1>
+                  <div id = "insights-2024"> 
+                    <h2> 2024 </h2>
+                    <ul class = "link-list">
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = insight-link> <a href = "https://www.binance.com/en/square/post/5659019280337"> Crypto market predictions for 2024 <span class ="material-symbols-outlined">chevron_right</span></a> </div>
+                        </li>
+
+                        <li>
+                           <hr style = "opacity: 0.5; margin-top: 30px;">
+                           <div class = insight-link> <a href = "https://russellinvestments.com/us/blog/qtr-q2-2024"> A rising tide: Q2 2024 trading report <span class="icon material-symbols-outlined">chevron_right</span> </a>  </div>
+                        </li>
+
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = "insight-link"><a href = "https://www.reuters.com/markets/risk-is-back-menu-sovereign-public-funds-survey-shows-2024-12-05/"> Shift towards private markets attracts investment <span class="icon material-symbols-outlined">chevron_right</span></a></div>
+                        </li>
+
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = "insight-link"><a href = "https://www.financemagnates.com/forex/analysis/top-financial-trends-to-watch-in-quarter-3-2024"> Regulation developments in cryptocurrency markets<span class="icon material-symbols-outlined">chevron_right</span></a></div>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                        </li>
+                    </ul>
+                  </div> 
+
+                  <div id = "insights-2023"> 
+                    <h2 style = "margin-top: 140px;"> 2023 </h2>
+                    <ul class = "link-list">
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = insight-link> <a href = "https://www.forbes.com/sites/ronshevlin/2022/02/22/embedded-finance-is-fueling-a-25-billion-banking-as-a-service-baas-opportunity/?sh=1dd27d4a55d5"> Embedded finance gaining momentum <span class ="material-symbols-outlined">chevron_right</span></a> </div>
+                        </li>
+
+                        <li>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                            <div class = "insight-link"><a href = "https://www.investopedia.com/nterest-rates-inflation-push-consumer-sentiment-lower-for-4th-straight-month-8400535"> High interest rates in risk of record high inflation<span class="icon material-symbols-outlined">chevron_right</span></a></div>
+                            <hr style = "opacity: 0.5; margin-top: 30px;">
+                        </li>
+                    </ul>
+
+                    
+                  </div> 
+                </div>
+                
+                
+                <div id="footer">
+                    <div id="logo_footer">
+                       <a href = "HOME.HTML"><img src="media/MISC/logo.png" alt="Company Logo" class="logo" height = 200 width = 200></a> 
+                    </div>
+           
+                    <div id="footer">
+                        <div id="logo_footer">
+                            <img src="media/MISC/logo.png" alt="Company Logo"
+                                class="logo" height=200 width=200>
+                        </div>
+    
+                        <div id="footer_lists">
+                            <!-- Trading Section -->
+                            <div id="footer_list1">
+                                <h3>Trading</h3>
+                                <ul>
+                                    <li>
+                                        <button
+                                            onclick="location.href='MARKETS.HTML'">
+                                            <span class="text">Markets</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            onclick="location.href='INSIGHTS.HTML'">
+                                            <span class="text">Insights</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            onclick="location.href='BROKERAGE.HTML'">
+                                            <span class="text">Brokerage</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <!-- News Section -->
+                            <div id="footer_list2">
+                                <h3>News</h3>
+                                <ul>
+                                    <li>
+                                        <button
+                                            onclick="location.href='ECONOMIC.HTML'">
+                                            <span class="text">Economic</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            onclick="location.href='NEWS.HTML'">
+                                            <span class="text">Business</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            onclick="location.href='CORPORATE.HTML'">
+                                            <span class="text">Corporate</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <!-- Wealth Management Section -->
+                            <div id="footer_list3">
+                                <h3>Wealth Management</h3>
+                                <ul>
+                                    <li>
+                                        <button
+                                            onclick="location.href='PERSONAL.HTML'">
+                                            <span class="text">Personal</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            onclick="location.href='ENTERPRISE.HTML'">
+                                            <span class="text">Enterprise</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <!-- About Us Section -->
+                            <div id="footer_list4">
+                                <h3>About us</h3>
+                                <ul>
+                                    <li>
+                                        <button
+                                            onclick="location.href='OUR_STORY.HTML'">
+                                            <span class="text">Our story</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            onclick="location.href='CAREERS.HTML'">
+                                            <span class="text">Careers</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <!-- Contact Us Section -->
+                            <div id="footer_list5">
+                                <h3>Contact us</h3>
+                                <ul>
+                                    <li>
+                                        <button
+                                            onclick="location.href='INQUIRIES.HTML'">
+                                            <span class="text">Inquiries</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button onclick="location.href='HELP.HTML'">
+                                            <span class="text">Help & FAQ</span>
+                                            <span
+                                                class="icon material-symbols-outlined">chevron_right</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div id="footer_socials">
+                            <ul>
+    
+                                <li><a href="https://facebook.com"
+                                        target="_blank"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://instagram.com"
+                                        target="_blank"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com" target="_blank"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://youtube.com" target="_blank"><i
+                                            class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://linkedin.com"
+                                        target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+    
+                            </ul>
+                        </div>
+    
+                    </div>
+    
+                </main>
+    
+            </div>
+    
+            <script src="javascript/nav.js"></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="javascript/app.js"></script>
+    
+        </body>
+    </html>
