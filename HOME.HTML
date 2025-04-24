@@ -472,8 +472,8 @@
               { id: "ZA", name: "South Africa", value: 12.7 },
               { id: "NZ", name: "New Zealand", value: 23.4 }
             ];
-            var minInvestment = Math.min(...investmentData.map(d => d.value));
-            var maxInvestment = Math.max(...investmentData.map(d => d.value));
+            var minInvestment = Math.min(investmentData.map(d => d.value));
+            var maxInvestment = Math.max(investmentData.map(d => d.value));
             var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
               geoJSON: am5geodata_worldLow,
               exclude: ["AQ"]
@@ -623,13 +623,6 @@
                                                 alt="General cryptocurrency coins"></a>
                                     </li>
                                 </ul>
-                                <div class="swiper-pagination"> </div>
-                                <div class="swiper2-prev"> <span
-                                        class="material-symbols-outlined">
-                                        arrow_back_ios</span> </div>
-                                <div class="swiper2-next"> <span
-                                        class="material-symbols-outlined">
-                                        arrow_forward_ios</span> </div>
                             </div>
                         </div>
                     </div>
