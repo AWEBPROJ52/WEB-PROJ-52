@@ -33,4 +33,3 @@ function formatNumber(number) {
 setInterval(updateLiveNumber, 1000); // Update every second
 
 document.getElementById('money').textContent = formatNumber(liveNumber);
-
