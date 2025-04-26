@@ -2365,6 +2365,7 @@ background-repeat: no-repeat;
 z-index: -1;
 position: absolute;
 inset: 0;
+
 padding-left: 20px;
 filter: blur(2px);
 }
@@ -2794,7 +2795,7 @@ background-position: center;
 z-index: -1;
 position: absolute;
 inset: 0;
-filter: blur(2px); /*might change later, but no need for blur now*/
+filter: blur(2px); 
 }
 
 .landing-section-enterprise
