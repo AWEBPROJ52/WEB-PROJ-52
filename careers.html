@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengar</title> 
+    <!-- DO NOT FORGET TO CHANGE THE FAVICON TO THE LOGO ONCE ITS READY -->
+    <link rel="icon" type="image/x-icon" href="/media/MISC/logo.ico">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- World Map library necessary files -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script> 
+    <!-- Linking material fonts (symbols) from google and font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <!-- Lines 10 to 12 are linking the Roboto font. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet" type = text/css>
+</head>
+<body>
+   
+        <!-- We need a header. -->
+        <header>
+                
+                <nav>
+                    <div id = "nav_menu">
+                    
+                     <!--LOGO-->
+                        <div id ="logo">
+                             <a href="HOME.HTML" class = "link-area"><img src="media/MISC/logo.png" alt="Company Logo" class ="logo" height = 150 width = 150></a>
+                        </div>
+                        <div id = "nav_items">
+                            <ul>
+                            <li><button class="search_button">
+                                <span class="material-symbols-outlined">search</span>
+                                <span class="text">Search</span>
+                                </button>
+                            </li>
+                            <li><button class="signin_button">
+                                <span class="material-symbols-outlined">person</span>
+                                <span class="text">Sign in</span>
+                                </button>
+                            </li>
+                            <li class="vertical_line"></li>
+        
+                            <li><button class="menu_button">
+                                <span class="material-symbols-outlined">menu</span>
+                                <span class="text">Menu</span>
+                                </button>
+                            </ul>
+                         </div>
+                    
+                    </div>
+        
+        
+                
+                </nav>
+           
+        </header>
+       <!-- Main Content -->
+    <div class="careers-container">
+        <h1 class="careers-title">Careers</h1>
+        
+        <div class="careers-content">
+            <p>At Pengar, we’re shaping the future of finance—powered by people who think boldly and act fearlessly. Whether you're an experienced professional or just starting out, we believe in unlocking your potential and providing the space to thrive. Join a team that's collaborative, driven by innovation, and passionate about making a real impact.</p>
+           
+        
+        <div class="careers-image">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Careers at Pengar">
+        </div>
+    </div>
+
+    <section class="testimonials-section">
+        <div class="testimonials-header">
+            <h2>Testimonials</h2>
+            <div class="our-story-section">
+                <p class="our-story-paragraph">
+                    Pengar was born from a simple idea: to make finance more accessible, transparent, and empowering for everyone...
+                </p>
+                <h2 class="our-story-link">Our story</h2>
+            </div>
+        </div>
+    
+        <div class="testimonial-cards">
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Person 1">
+                <p class="card-text">"Pengar changed the way I view money!"</p>
+            </div>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Person 2">
+                <p class="card-text">"So easy to use and reliable."</p>
+            </div>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Person 3">
+                <p class="card-text">"Customer support is top notch!"</p>
+            </div>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Person 4">
+                <p class="card-text">"Finally a finance app I trust."</p>
+            </div>
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Person 5">
+                <p class="card-text">"Intuitive and beautifully designed."</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="apply-section">
+        <h2 class="apply-title">Apply for a position</h2>
+        <form class="apply-form">
+            <div class="name-fields">
+                <input type="text" name="first-name" placeholder="First name" required>
+                <input type="text" name="last-name" placeholder="Last name" required>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="position" placeholder="Position" required>
+            <input type="text" name="location" placeholder="Location" required>
+            <input type="text" name="Phone Number" placeholder="Phone Number" required>
+            <button type="submit">Apply</button>
+        </form>
+    </section>
+    
+    
+    <!-- Footer Navigation -->
+    
+    </div>
+    <div id="footer">
+        <div id="logo_footer">
+            <img src="media/MISC/logo.png" alt="Company Logo" class="logo" height = 200 width = 200>
+        </div>
+
+        <div id="footer_lists">
+            <!-- Trading Section -->
+            <div id="footer_list1">
+                <h3>Trading</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='MARKETS.HTML'">
+                            <span class="text">Markets</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='INSIGHTS.HTML'">
+                            <span class="text">Insights</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='BROKERAGE.HTML'">
+                            <span class="text">Brokerage</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- News Section -->
+            <div id="footer_list2">
+                <h3>News</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='ECONOMIC.HTML'">
+                            <span class="text">Economic</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='BUSINESS.HTML'">
+                            <span class="text">Business</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='CORPORATE.HTML'">
+                            <span class="text">Corporate</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Wealth Management Section -->
+            <div id="footer_list3">
+                <h3>Wealth Management</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='PERSONAL.HTML'">
+                            <span class="text">Personal</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='ENTERPRISE.HTML'">
+                            <span class="text">Enterprise</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- About Us Section -->
+            <div id="footer_list4">
+                <h3>About us</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='OUR_STORY.HTML'">
+                            <span class="text">Our story</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='CAREERS.HTML'">
+                            <span class="text">Careers</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div id="footer_list5">
+                <h3>Contact us</h3>
+                <ul>
+                    <li>
+                        <button onclick="location.href='INQUIRIES.HTML'">
+                            <span class="text">Inquiries</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="location.href='HELP.HTML'">
+                            <span class="text">Help & FAQ</span>
+                            <span class="icon material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer_socials">
+          <ul>
+
+              <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+
+        </ul>
+        </div>
+
+    </div>
+
+
+    <script src="javascript/nav.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src = "javascript/app.js"></script>
+</body>
+</html>
+    </div>
+    
+
+</html>
+</body>
