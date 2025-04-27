@@ -1,433 +1,568 @@
-/* Start of CSS used in HOME */
-html
-{
-scroll-behavior: smooth;
-}
-#content
-{
-font-family: "Roboto", Arial, Helvetica, sans-serif;
-font-weight: 700;
-}
-#content #background 
-{
-background-image: url("media/HOME/Finnish_Nature_six.jpg");
-opacity: 0.8;
-background-position: center;
-width: 100%;
-height: 100%;
-background-size: cover;
-background-repeat: no-repeat;
-z-index: -1;
-position: absolute;
-inset: 0;
-margin: 0;
-padding: 0;
-filter: blur(0px); /*might change later, but no need for blur now*/
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #111;
+  }
+  
+  header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .container100 {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .history .intro {
+    margin-bottom: 3rem;
+  }
+  
+  .history h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .history p {
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 8px;
+    
+  }
+  
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 2rem;
+  }
+  
+  .event {
+    text-align: center;
+    width: 20%;
+    z-index: 1;
+  }
+  
+  .event h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event p {
+    font-size: 0.9rem;
+    color: #444;
+  }
+/* Main Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f9fafb;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* History Section */
+  .history {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+ 
+  .intro {
+    text-align: center;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #111827;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #1d4ed8;
+  }
+  
+  .intro h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #6b7280;
+    font-weight: 400;
+  }
+  
+ 
+  .intro {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+  
+  
+  .intro h1:first-of-type {
+    margin-top: 60px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 15px;
+    }
+    
+    .history {
+      padding: 40px 20px;
+    }
+  
+    .intro h1 {
+      font-size: 2rem;
+    }
+  
+    .intro h2 {
+      font-size: 1.5rem;
+    }
+  
+    .intro h4 {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Start of CSS used in HOME */
+html {
+    scroll-behavior: smooth;
 }
 
-#pagefront
-{
-text-shadow: 5px 5px 37px #FAF9F6;
-color: #001538;
-margin-top: 150px;
-margin-bottom: 230px;
-font-size: 160%; 
-opacity: 1;
-text-align: center;
+#content {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+#content #background {
+    background-image: url("media/HOME/Finnish_Nature_six.jpg");
+    opacity: 0.8;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    filter: blur(0px);
+    /*might change later, but no need for blur now*/
+}
+
+#pagefront {
+    text-shadow: 5px 5px 37px #FAF9F6;
+    color: #001538;
+    margin-top: 150px;
+    margin-bottom: 230px;
+    font-size: 160%;
+    opacity: 1;
+    text-align: center;
+    
 }
 
 /*Numbers part*/
-#pagefront #money
-{
-text-shadow: none;
-font-size: 350%;
+#pagefront #money {
+    text-shadow: none;
+    font-size: 340%;
 }
 
-#companyName
-{
-padding-bottom: 10px;
-font-weight: 800;
-color: #2c2449;
-font-size: 120%;
-opacity: 1;
+#companyName {
+    padding-bottom: 10px;
+    font-weight: 800;
+    color: #2c2449;
+    font-size: 120%;
+    opacity: 1;
 }
 
-#description
-{
-margin-top: 3%;
-font-weight: 400;
-font-size: 150%;
+#description {
+    margin-top: 3%;
+    font-weight: 400;
+    font-size: 150%;
 }
 
-.learn-btn
-{
-position:absolute;
-font-size: 20px;
-margin-top: 5%;
-display:inline-flex;
-flex-direction: column;
-align-items: center;
-transition-duration: 0.5s;
-color: #261e42;
-background: #fffefe75;
-padding-top: 1%; padding-bottom: 1%; padding-right: 2%; padding-left: 2%;
-border-radius: 50px;
-text-decoration: none;
-margin-left: -68px; /* Temporary fix */
+.learn-btn {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 5%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 0.5s;
+    color: #261e42;
+    background: #fffefe75;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-left: -68px;
+    /* Temporary fix */
 }
 
-.learn-btn::after
-{
-transition-duration: 0.5s;
-content: "arrow_downward";
-font-family: "Material Symbols Outlined";
-position:absolute;
-opacity: 0;
-}
-.learn-btn:hover
-{
-background: #fffefe;
-padding-bottom: 3%;
-}
-.learn-btn:hover::after
-{
-content: "arrow_downward";
-font-family: "Material Symbols Outlined";
-transition-duration: 0.5s;
-opacity: 1;
-padding-top: 18%;
+.learn-btn::after {
+    transition-duration: 0.5s;
+    content: "arrow_downward";
+    font-family: "Material Symbols Outlined";
+    position: absolute;
+    opacity: 0;
 }
 
-#about
-{
-position: relative;
-color: #001538;
-margin: 0;
-margin-bottom: 250px;
+.learn-btn:hover {
+    background: #fffefe;
+    padding-bottom: 3%;
 }
 
-#about h2
-{
-margin-left: 1.5%;
-padding-top: 150px;
-font-weight: 400;
-text-align: left;
-font-size: 250%;
+.learn-btn:hover::after {
+    content: "arrow_downward";
+    font-family: "Material Symbols Outlined";
+    transition-duration: 0.5s;
+    opacity: 1;
+    padding-top: 18%;
 }
 
-#about p
-{
-margin-left: 1.5%;
-margin-top: 30px;
-margin-bottom: 45px;
-color: #041c44;
-line-height: 28px;
-font-weight: 350;
-font-size: 110%;
-max-width: 50%;
+#about {
+    position: relative;
+    color: #001538;
+    margin: 0;
+    margin-bottom: 250px;
 }
 
-#wealth-management-solutions
-{
-position: relative;
-color: #001538;
-background-color: #faf8f5;
-padding-bottom: 150px;
+#about h2 {
+    margin-left: 1.5%;
+    padding-top: 150px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 250%;
 }
 
-#wealth-management-solutions h2
-{
-margin-left: 1.5%;
-font-weight: 400;
-font-size: 250%;
+#about p {
+    margin-left: 1.5%;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    color: #041c44;
+    line-height: 28px;
+    font-weight: 350;
+    font-size: 110%;
+    max-width: 50%;
 }
 
-#wealth-management-solutions p
-{
-margin-left: 1.5%;
-padding-bottom: 4%;
-padding-left: 40%;
-color: #041c44;
-line-height: 28px;
-font-weight: 350;
-font-size: 110%;
-max-width: 80%;
+#wealth-management-solutions {
+    position: relative;
+    color: #001538;
+    background-color: #faf8f5;
+    padding-bottom: 150px;
 }
 
-/* Button function in the HOME page */
-.page-btn, .btn-text
-{
-display:inline-flex;
-align-items: center;
-gap: 8px;
-position:relative;
-transition-duration: 0.5s;
-color: #041c44;
-background: transparent;
-text-decoration: none;
+#wealth-management-solutions h2 {
+    margin-left: 1.5%;
+    font-weight: 400;
+    font-size: 250%;
 }
 
-.page-btn .btn-text
-{
-text-decoration: underline;
-text-decoration-thickness: 1%;
-text-decoration-skip-ink: all;
-}
-.material-symbols-outlined
-{
-transition-duration: 0.3s;
-}
-
-.page-btn:hover .material-symbols-outlined, .page-btn:hover .btn-text
-{
-font-weight: 500;
-transform: translateX(10px);
-text-decoration-thickness: 10%;
-text-decoration-skip-ink: all;
-}
-/* Button function in the HOME page */
-
-.option-list .option-item 
-{
-list-style: none;
-display:inline-flex;
-flex-direction: column;
-margin: 40px;
+#wealth-management-solutions p {
+    margin-left: 1.5%;
+    padding-bottom: 4%;
+    padding-left: 40%;
+    color: #041c44;
+    line-height: 28px;
+    font-weight: 350;
+    font-size: 110%;
+    max-width: 80%;
 }
 
-.option-list .option-item .option-link
-{
-height: 150px;
-width: 150px;
-display: block;
-background-color: beige;
-padding: 18px;
-border-radius: 20px;
-}
-.option-list .option-link .option-image
-{
-height: 150px;
-width: 150px;
-aspect-ratio: 16/9;
-object-fit: cover;
-border-radius: 10px;
+
+
+
+
+
+
+
+
+
+
+
+
+/* Button functions in the HOME page */
+.page-btn,
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition-duration: 0.5s;
+    color: #041c44;
+    background: transparent;
+    text-decoration: none;
 }
 
-.option-list .option-link .option-button
-{
-height: 35px;
-width: 35px;
-border-radius: 50%;
+.page-btn .btn-text {
+    text-decoration: underline;
+    text-decoration-thickness: 1%;
+    text-decoration-skip-ink: all;
 }
 
-.swiper-prev
-{
-position: absolute;
-top: 60%;
-border-radius: 50px;
-cursor: pointer;
-left: 88%
+.material-symbols-outlined {
+    transition-duration: 0.3s;
 }
 
-.swiper-next
-{
-position: absolute;
-top: 60%;
-border-radius: 50px;
-cursor: pointer;
-left: 90%;
+.page-btn:hover .material-symbols-outlined,
+.page-btn:hover .btn-text {
+
+    transform: translateX(10px);
+    text-decoration-thickness: 10%;
+    text-decoration-skip-ink: all;
 }
 
-.swiper2-prev
-{
-position: absolute;
-top: 25%;
-border-radius: 50px;
-cursor: pointer;
-left: 88%
+
+
+
+
+
+
+/* slider function in the HOME page */
+
+/* Make the option-list work with Slick */
+
+.option-list {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.swiper2-next
-{
-position: absolute;
-top: 25%;
-border-radius: 50px;
-cursor: pointer;
-left: 90%;
+.option-list .option-item {
+    padding: 0 10px !important;
+    /* Add some space between items */
+    list-style: none !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    margin: 10px !important;
+    /* Reduced from 40px */
 }
 
-#historic-performance
-{
-position: relative;
-color: #001538;
-background: #dee8ee75;
+.option-list .option-link {
+    height: 220px !important;
+    /* Increased from 150px */
+    width: 220px !important;
+    /* Increased from 150px */
+    display: block !important;
+    background-color: beige !important;
+    padding: 10px !important;
+    /* Reduced from 18px */
+    border-radius: 20px !important;
 }
 
-#historic-performance h2
-{
-padding-top: 100px;
-margin-left: 1.5%;
-font-weight: 400;
-font-size: 250%;
+.option-list .option-link .option-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
 }
 
-#countries
-{
-position: relative;
-color: #001538;
-background: #faf8f5;
+/* Style for the navigation arrows  (DONT WORK RN)*/
+.swiper-prev,
+.swiper-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
-#countries h2
-{
-padding-top: 100px;
-margin-left: 1.5%;
-font-weight: 400;
-font-size: 250%;
+.swiper-prev {
+    left: -30px;
 }
 
-#countries p
-{
-margin-top: 1.5%;
-margin-left: 1.5%;
-color: #041c44;
-line-height: 28px;
-font-weight: 350;
-font-size: 130%;
-max-width: 45%;
+.swiper-next {
+    right: -30px;
 }
 
-#active-investing
-{
-position: relative;
-color: #001538;
-background: #faf8f5;
+/*Home styling continued*/
+
+#historic-performance {
+    position: relative;
+    color: #001538;
+    background: #dee8ee75;
 }
 
-#active-investing h2
-{
-padding-bottom: 30px;
-padding-top: 50px;
-margin-left: 1.5%;
-font-weight: 400;
-font-size: 250%;
+
+#historic-performance h2 {
+    padding-top: 100px;
+    margin-left: 1.5%;
+    font-weight: 400;
+    font-size: 250%;
 }
 
-#active-investing p
-{
-margin-left: 1.5%;
-margin-bottom: 40px;
-color: #041c44;
-line-height: 28px;
-font-weight: 350;
-font-size: 110%;
-max-width: 50%;
+#countries {
+    position: relative;
+    color: #001538;
+    background: #faf8f5;
 }
 
-#top-story
-{
-display: inline-block;
-position: relative;
-color:#FFF8DC;
-background: #0c1072;
+#countries h2 {
+    padding-top: 100px;
+    margin-left: 1.5%;
+    font-weight: 400;
+    font-size: 250%;
 }
 
-#top-story h1
-{
-margin: 0;
-padding-top: 30px;
-text-align: center;
-position: relative;
-color: #FFF8DC;
-background: inherit;
+#countries p {
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    color: #041c44;
+    line-height: 28px;
+    font-weight: 350;
+    font-size: 130%;
+    max-width: 45%;
 }
 
-#top-story h2
-{
-padding-bottom: 30px;
-padding-top: 50px;
-margin-left: 1.5%;
-font-weight: 400;
-font-size: 250%;
+#active-investing {
+    position: relative;
+    color: #001538;
+    background: #faf8f5;
 }
 
-#top-story p
-{
-margin-left: 1.5%;
-margin-top: 20px;
-color: aliceblue;
-line-height: 28px;
-font-weight: 350;
-font-size: 110%;
-max-width: 60%;
+#active-investing h2 {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    margin-left: 1.5%;
+    font-weight: 400;
+    font-size: 250%;
 }
 
-#crypto-coins
-{
-float: right;
-max-height: 30%;
-max-width: 30%;
-margin-right: 7%;
+#active-investing p {
+    margin-left: 1.5%;
+    margin-bottom: 40px;
+    color: #041c44;
+    line-height: 28px;
+    font-weight: 350;
+    font-size: 110%;
+    max-width: 50%;
 }
 
-#other-news
-{
-position: relative;
-color:#FFF8DC;
-background: #0c1072;
-padding-bottom: 150px;
+#top-story {
+    display: inline-block;
+    position: relative;
+    color: #FFF8DC;
+    background: #0c1072;
 }
 
-#other-news h2
-{
-padding-bottom: 30px;
-padding-top: 50px;
-margin-left: 1.5%;
-font-weight: 400;
-font-size: 250%;
+#top-story h1 {
+    margin: 0;
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+    color: #FFF8DC;
+    background: inherit;
 }
 
-#other-news p
-{
-margin-left: 1.5%;
-margin-bottom: 40px;
-color: aliceblue;
-line-height: 28px;
-font-weight: 350;
-font-size: 110%;
-max-width: 50%;
+#top-story h2 {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    margin-left: 1.5%;
+    font-weight: 400;
+    font-size: 250%;
 }
 
-.page-btn-color2, .color2-btn-text
-{
-display:inline-flex;
-align-items: center;
-gap: 8px;
-position:relative;
-transition-duration: 0.5s;
-color: aliceblue;
-background: transparent;
-text-decoration: none;
+#top-story p {
+    margin-left: 1.5%;
+    margin-top: 20px;
+    color: aliceblue;
+    line-height: 28px;
+    font-weight: 350;
+    font-size: 110%;
+    max-width: 60%;
 }
 
-.page-btn-color2 .color2-btn-text
-{
-font-size: 40%;
-text-decoration: underline;
-text-decoration-thickness: 1%;
-text-decoration-skip-ink: all;
-}
-.material-symbols-outlined
-{
-transition-duration: 0.3s;
+#crypto-coins {
+    float: right;
+    max-height: 30%;
+    max-width: 30%;
+    margin-right: 7%;
 }
 
-.page-btn-color2:hover .material-symbols-outlined, .page-btn-color2:hover .color2-btn-text
-{
-font-weight: 500;
-transform: translateX(10px);
-text-decoration-thickness: 10%;
-text-decoration-skip-ink: all;
+#other-news {
+    position: relative;
+    color: #FFF8DC;
+    background: #0c1072;
+    padding-bottom: 150px;
+}
+
+#other-news h2 {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    margin-left: 1.5%;
+    font-weight: 400;
+    font-size: 250%;
+}
+
+#other-news p {
+    margin-left: 1.5%;
+    margin-bottom: 40px;
+    color: aliceblue;
+    line-height: 28px;
+    font-weight: 350;
+    font-size: 110%;
+    max-width: 50%;
+}
+
+
+
+.page-btn-color2,
+.color2-btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition-duration: 0.5s;
+    color: aliceblue;
+    background: transparent;
+    text-decoration: none;
+}
+
+.page-btn-color2 .color2-btn-text {
+    font-size: 40%;
+    text-decoration: underline;
+    text-decoration-thickness: 1%;
+    text-decoration-skip-ink: all;
+}
+
+.material-symbols-outlined {
+    transition-duration: 0.3s;
+}
+
+.page-btn-color2:hover .material-symbols-outlined,
+.page-btn-color2:hover .color2-btn-text {
+    font-weight: 400;
+    transform: translateX(10px);
+    text-decoration-thickness: 10%;
+    text-decoration-skip-ink: all;
 }
 
 /* Start of CSS used in NAV */
@@ -436,24 +571,28 @@ text-decoration-skip-ink: all;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; /*for mac os i guess (not needed)*/
+    -moz-osx-font-smoothing: grayscale;
+    /*for mac os i guess (not needed)*/
     text-rendering: optimizeLegibility;
-    
+
 }
 
 /* Styling for the body and wrapper and header to remove invis padding*/
-body, html {
+body,
+html {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
-    /*max-width: auto;*/ /* (This rule apparently was checked as an error on W3C validator -E ), (its fine to remove if it doesnt break anything -A) */
-    overflow-x: hidden; /*stops scrolling on x axis*/
+    /*max-width: auto;*/
+    /* (This rule apparently was checked as an error on W3C validator -E ), (its fine to remove if it doesnt break anything -A) */
+    overflow-x: hidden;
+    /*stops scrolling on x axis*/
 }
 
 #wrapper {
@@ -463,7 +602,8 @@ body, html {
 
 /* Header and navigation bar styling */
 header {
-    position: fixed; /* Sticks to the top */
+    position: fixed;
+    /* Sticks to the top */
     top: 0;
     left: 0;
     right: 0;
@@ -473,48 +613,62 @@ header {
     box-sizing: border-box;
     height: 90px;
     background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(7px); /* Blurs the background */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adds a small border */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
-    font-size: 16px; /* Font size for the header */
-    font-weight: 300; /* Font weight for the header */
+    backdrop-filter: blur(7px);
+    /* Blurs the background */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Adds a small border */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    /* Font size for the header */
+    font-weight: 300;
+    /* Font weight for the header */
     line-height: 28px;
-    z-index: 1000; /* so it stays on top of other elements */
-    background-clip: padding-box; /* so blur doesnt effect border */
+    z-index: 1100;
+    /* so it stays on top of other elements */
+    background-clip: padding-box;
+    /* so blur doesnt effect border */
+    transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
 }
 
 nav {
     width: 100%;
     height: 100%;
-    
 }
 
 /* centering the div... (finally) */
 #nav_menu {
     display: flex;
-    align-items: center; /* up and down */
-    justify-content: space-between; /* left and right */
+    align-items: center;
+    /* up and down */
+    justify-content: space-between;
+    /* left and right */
     height: 70px;
     width: auto;
     height: 100%;
-    flex-grow: 1; /* Makes it take up all available space */
-    padding: 16px 32px; /* Adds padding all around */
+    flex-grow: 1;
+    /* Makes it take up all available space */
+    padding: 16px 32px;
+    /* Adds padding all around */
     box-sizing: border-box;
 }
 
 /* Logo */
 #logo {
     display: flex;
-    align-items: center; /* up and down */
-    justify-content: center; /* left and right */
+    align-items: center;
+    /* up and down */
+    justify-content: center;
+    /* left and right */
     height: 57px;
     width: 150px;
 }
 
 .link-area {
     display: flex;
-    align-items: center;  /* vertical alignment */
-    justify-content: center;  /* horizontal alignment  */
+    align-items: center;
+    /* vertical alignment */
+    justify-content: center;
+    /* horizontal alignment  */
     height: 57px;
     width: 140px;
     overflow: hidden;
@@ -523,21 +677,27 @@ nav {
 /* nav items */
 #nav_items {
     display: flex;
-    align-items: center; 
-    width: 443px; /* Width of the navigation items container */
-    height: 57px; /* Height of the navigation items container */
+    align-items: center;
+    width: 443px;
+    /* Width of the navigation items container */
+    height: 57px;
+    /* Height of the navigation items container */
     justify-content: flex-end;
+    position: relative;
 }
 
 /* Removing the bullet points aswell*/
 #nav_items ul {
     display: flex;
-    align-items: center; /* Vertically centers the items */
-    justify-content: center; /* Horizontally centers the items */
-    list-style: none; 
+    align-items: center;
+    /* Vertically centers the items */
+    justify-content: center;
+    /* Horizontally centers the items */
+    list-style: none;
     margin: 0;
     padding: 0;
-    gap: 21px; /* Space between the items */
+    gap: 21px;
+    /* Space between the items */
     width: 100%;
     height: 100%;
 }
@@ -545,82 +705,164 @@ nav {
 /* Vertical line */
 #nav_items ul li.vertical_line {
     width: 0.9px;
-    min-width:0.9px;
+    min-width: 0.9px;
     height: 28px;
-    border: 0.8px; 
-    background-color: rgba(0, 0, 0, 0.3);  /* subtle dark color */
+    border: 0.8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* subtle dark color */
     margin: 0;
     padding: 0;
-    pointer-events: none;  /* makes it non-interactive */
-    user-select: none;     /* prevents text selection */
-    align-self: center;   
+    pointer-events: none;
+    /* makes it non-interactive */
+    user-select: none;
+    /* prevents text selection */
+    align-self: center;
 }
+
 #nav_items ul li {
-    display: flex; /* Enables flexbox layout for child alignment */
-    align-items: center; /* Vertically centers the button */
-    justify-content: center; /* Horizontally centers the button */
-    width: 133px; /* Fixed width for each list item */
-    height: 52px; /* Fixed height for each list item */
+    display: flex;
+    align-items: center;
+    /* Vertically  */
+    justify-content: center;
+    /* Horizontally */
+    width: 133px;
+    height: 52px;
     padding: 0;
     box-sizing: border-box;
 }
 
 #nav_items ul li button {
-    all: unset; /* Resets default button styles because i started out useing anchor tags instead of buttons*/
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: #000000; 
-    font-weight: 420; 
-    font-size: 18px; 
-    line-height: 20px; 
-    padding: 12px 24px; /* Matches the padding of links (clickable aswell= */
+    all: unset;
+    /* Resets default button styles because i started out useing anchor tags instead of buttons*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: 420;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 12px 24px;
+    /* Matches the padding of links (clickable aswell= */
     width: 133px;
     height: 28px;
-    background-color: transparent; 
-    border: none; 
-    border-radius: 30px; /* Matches the rounded corners of links (after) */
-    cursor: pointer; /* Adds a pointer cursor for buttons */
-    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease; /* Matches the hover effect of links */
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    /* Matches the rounded corners of links (after) */
+    cursor: pointer;
+    /* Adds a pointer cursor for buttons */
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    /* Matches the hover effect of links */
 }
 
 /* Hover effect for buttons ( I had to changed to buttons from links so i had to make them the same) */
 #nav_items ul li button:hover {
-    color: #000000; /* Matches the hover color of links */
-    background-color: rgba(0, 0, 0, 0.1); /* Matches the hover background of links */
-    border-radius: 50px; /* Matches the hover rounded corners of links (before) */
+    color: #000000;
+    /* Matches the hover color of links */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Matches the hover background of links */
+    border-radius: 50px;
+    /* Matches the hover rounded corners of links (before) */
 }
 
-/* Search button specific styling */
+/* Add positioning context to the list item parent */
+#nav_items ul li {
+    position: relative; 
+    
+    
+}
+
+
+/* START OF SEARCH BUTTON STYLING WITH TEXT BOX */
+
 #nav_items ul li button.search_button {
     display: flex;
-    justify-content: flex-start;
-    gap: 8px;
+    justify-content: flex-start; /* Keeps icon and content aligned to the left */
     align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
     width: 133px;
     height: 52px;
-    padding: 12px 24px;
     box-sizing: border-box;
+    border: none;
+
+    /* --- Styles to keep the right side stationary --- */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    
+    transition: width 0.3s ease, gap 0.3s ease, padding 0.3s ease;
+    flex-shrink: 0;
 }
 
 #nav_items ul li button.search_button .material-symbols-outlined {
     font-size: 20px;
+    flex-shrink: 0;
+    transition: opacity 0.1s ease;
 }
 
-/* Sign in button specific styling */
-#nav_items ul li button.signin_button {
-    display: flex;
-    justify-content: flex-start;
-    gap: 8px;
-    align-items: center;
-    width: 133px;
-    height: 52px;
-    padding: 12px 24px;
-    box-sizing: border-box;
+#nav_items ul li button.search_button .text {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.1s ease, visibility 0s linear 0.13s;
+    flex-shrink: 0;
 }
 
-#nav_items ul li button.signin_button .material-symbols-outlined {
-    font-size: 20px;
+/* Input field styling (Initially Hidden) */
+#nav_items ul li button.search_button .search-input {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-size: 18px;
+    flex-grow: 1;
+    min-width: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    width: 0;
+    transition: opacity 0.3s ease, visibility 0s linear, margin-left 0.3s ease;
+
+}
+
+/* Optional: Style the input placeholder */
+#nav_items ul li button.search_button .search-input::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+
+/*  Hover State for the Button */
+#nav_items ul li button.search_button:hover {
+    width: 270px;
+    gap: 4px;
+    padding-left: 12px;
+}
+
+/*Content Swap on Hover (Applied when button is hovered) /
+
+/* Hide text when button is hovered */
+#nav_items ul li button.search_button:hover .text {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s, 0.3s;
+
+}
+
+/* Show input when button is hovered */
+#nav_items ul li button.search_button:hover .search-input {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    margin-left: -29px;
+    transition-delay: 0.2s, 0.2s, 0.2s;
+}
+#nav_items ul li button.search_button:hover .material-symbols-outlined {
+    margin-left: 15px; 
+    transition-delay: 0.3s, 0.3s; 
 }
 
 /* Menu button specific styling */
@@ -639,31 +881,437 @@ nav {
     font-size: 20px;
 }
 
+
+/* START OF THE HEADER MENU FUNCTIONALITY */
+
+
+
+/* Styles for the overlay screen that appears below the header */
+.overlay {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 90px); /*to fill the screen below the header*/
+    background-color: #fff;
+    z-index: 1040; /*below header*/
+    visibility: hidden; /* Hide it by default */
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    padding: 20px;
+    overflow-y: hidden; /* to stop scrolling if the contnent is too long ( cant happen)*/
+}
+
+/* Style for when the overlay is shown */
+.overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Container for content within the overlay */
+.overlay-content {
+    padding: 15px 20px 50px 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "menu-sections submenu"
+        "menu-sections informed";
+    gap: 40px;
+    position: relative;
+    height: calc(100vh - 130px); /* Adjusted height so that  its in the position i wanted */
+  
+}
+
+
+
+
+
+/* Positioning for the three main sections */
+
+.overlay-menu-sections {
+    grid-area: menu-sections;
+    align-self: start;
+    width: 395px; /* fixed width to 394px (only way to fix it) */
+    
+}
+
+.overlay-submenu-content {
+    grid-area: submenu;
+    justify-self: end;
+    align-self: start;
+    padding-right: 640px;
+    padding-top: 20px;
+    width: 200px;
+    white-space: nowrap;
+    display: none; /*hide until you hover*/
+}
+
+/* Show active submenu */
+.overlay-submenu-content.active {
+    display: block;
+}
+
+/* Style for active menu item */
+.menu-item.active button {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Styles for the submenu heading */
+.overlay-submenu-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: #555;
+    
+}
+
+/* Styles for the submenu list container */
+.overlay-submenu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for individual submenu list items */
+.overlay-submenu-content li {
+    margin-bottom: 8px;
+}
+
+/* Styles for the buttons inside submenu list items */
+.overlay-submenu-content ul li button {
+    all: unset; /*remove defualt button styles*/
+    cursor: pointer;
+    padding: 0px;
+    font-size: 22px;
+    font-weight: normal;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text left, icons and right */
+    transition: color 0.2s ease;
+}
+
+/* Style for the text span within the button */
+.overlay-submenu-content ul li button .text {
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    transition: text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+}
+
+/* Style for the icon span within the button */
+.overlay-submenu-content ul li button .icon {
+    font-size: 26px;
+    color: #000;
+    flex-shrink: 0; /* Prevent shrinking */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for the text span */
+.overlay-submenu-content ul li button:hover .text {
+    text-decoration-color: rgba(0, 0, 0, 1);
+    text-decoration-thickness: 1.1px;
+}
+
+/* Hover effect for the icon span */
+.overlay-submenu-content ul li button:hover .icon {
+    transform: translateX(4px);
+    color: #555;
+}
+
+.stay-informed {
+    grid-area: informed;
+    justify-self: end;
+    align-self: end;
+}
+
+.stay-informed h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.informed-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+.informed-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.informed-text h4 {
+    padding-bottom: 15px;
+}
+
+
+
+
+
+.main-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.main-menu-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+
+/* Style the buttons inside the main menu list items */
+.main-menu-list li button {
+    all: unset;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 35px;
+    font-weight: normal;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+
+    /* Use flexbox to align text and icon horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text left, icon right */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    
+}
+
+.main-menu-list li button .text {
+    text-decoration: none;
+    flex-grow: 1; /* Allow text to and fill space */
+}
+
+/* Hover effect for the buttons */
+
+.main-menu-list li button .arrow-icon {
+    font-size: 1.2em;
+    color: #000;
+    flex-shrink: 0; 
+    
+    /* Initially hide the arrow */
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    transform: translateX(-5px);
+    /* Start slightly left slide-in effect */
+}
+
+.main-menu-list li button:hover .arrow-icon {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    /* Slide */
+}
+
+.main-menu-list li button.active-menu-item {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main-menu-list li button.active-menu-item .arrow-icon {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+
+}
+
+.main-menu-list li button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+
+}
+
+.main-menu-list li button:hover .arrow-icon {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+/* Basic style for the close button placed inside the overlay content */
+#close-overlay {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+
+}
+
+
+
+
+
+
+
+/* WHEN THE MENU IS OPEN (some lines for the styling of the menu icons is still above this */
+
+
+body.menu-open header {
+    background-color: #fff;
+
+}
+
+
+/* Default state (menu is closed): Hide the close icon and close text */
+.menu_button .close-icon,
+.menu_button .close-text {
+    display: none;
+}
+
+
+.menu_button .menu-icon,
+.menu_button .menu-text {
+    display: inline-block; 
+}
+
+
+/* When the body has the 'menu-open' class (when the overlay is visible)... */
+/* ...hide the menu icon and menu text */
+body.menu-open .menu_button .menu-icon,
+body.menu-open .menu_button .menu-text {
+    display: none;
+}
+
+/* ...and show the close icon and close text */
+body.menu-open .menu_button .close-icon,
+body.menu-open .menu_button .close-text {
+    display: inline-block;
+
+}
+
+
+/* styiling for the popular pages*/
+
+
+
+
+.popular-pages {
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+/* Styles for the Popular Pages heading */
+.popular-pages h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Styles for the list container */
+.popular-pages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for individual list items */
+.popular-pages li {
+    margin-bottom: 8px;
+}
+
+/* styles for the buttons inside Popular Pages list items */
+.popular-pages ul li button {
+    all: unset;
+    cursor: pointer;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+
+    /* Use flexbox to align text and icon */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Push text left, icon right */
+
+    /* Add transition for smooth effects */
+    transition: color 0.2s ease; /*keeps the color, might need it maybe?*/
+}
+
+/* Corrected Style for the text span within the button */
+.popular-pages ul li button .text {
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    transition: text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+}
+
+/* Corrected Style for the icon span within the button */
+.popular-pages ul li button .icon {
+    font-size: 20px;
+    color: #000;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+   
+}
+
+/* Hover effect for the buttons (overall button hover/ only for the popular pages, would be more efficient to get a style for ALL buttons...) */
+.popular-pages ul li button:hover {
+    background-color: transparent;
+   
+}
+
+/* Hover effect for the text span (underline thickness and color) */
+.popular-pages ul li button:hover .text {
+    text-decoration-color: rgba(0, 0, 0, 1);
+    text-decoration-thickness: 1.1px;
+}
+
+/* Hover effect for the icon span (move and color) */
+.popular-pages ul li button:hover .icon {
+    transform: translateX(4px);
+    color: #555;
+}
+
+
+
 /* STAR OF STYLING FOR HIDDEN CLASS (HOME)*/
 
-.hidden 
-{
-opacity: 0;
-transform: translateY(50px); /* Moves elements down slightly */
-transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Moves elements down slightly */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* When visible, fade and slide in */
-.show 
-{
-opacity: 1;
-transform: translateY(0);
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.show-2 
-{
-transition-delay: 0.1s;
+.show-2 {
+    transition-delay: 0.1s;
 }
 
 /*START IF STYLING IN FOOTER*/
- 
-#footer
-{
+
+#footer {
     width: 100%;
     height: 350px;
     padding: 35px;
@@ -674,125 +1322,132 @@ transition-delay: 0.1s;
 }
 
 
- 
+
 #logo_footer {
-    min-width: 230px; 
+    min-width: 230px;
 }
- 
-#footer_lists
-{
+
+#footer_lists {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     padding-left: 2%;
     padding-right: 2%;
 }
- 
+
 #footer_lists ul {
     list-style: none;
     color: #000000;
-    padding: 0; 
-    margin: 0; 
+    padding: 0;
+    margin: 0;
 }
- 
+
 #footer_lists ul li {
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
+
 #footer_lists h3 {
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
- 
+
 /*changing to buttons*/
- 
+
 #footer_lists ul li button {
-    background-color: transparent; 
-    border: none; 
-    color: #000; 
-    font-size: 16px; 
-    font-family: inherit; 
-    cursor: pointer; 
-    padding: 0; 
-    text-align: left; 
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
 }
- 
+
 /* Styling the footer buttons */
 #footer_lists ul li button {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    background-color: transparent; 
-    border: none; 
-    color: #000; 
-    font-size: 16px; 
-    font-family: inherit; 
-    padding: 0px 0px; /* Padding for the button */
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 0px 0px;
+    /* Padding for the button */
     text-align: left;
 }
- 
+
 /* Styling the text span */
 #footer_lists ul li button .text {
-    flex-grow: 1; 
-    text-align: left; 
+    flex-grow: 1;
+    text-align: left;
     text-decoration: underline;
     text-decoration-thickness: 0.1px;
     text-underline-offset: 3px;
     text-decoration-color: rgba(0, 0, 0, 0.3);
     transition: text-decoration-color 0.2s ease;
 }
- 
+
 #footer_lists ul li button:hover .text {
-    text-decoration-color: rgba(0, 0, 0, 1); 
-    text-decoration-thickness: 1.1px; /*underline thickness */
+    text-decoration-color: rgba(0, 0, 0, 1);
+    text-decoration-thickness: 1.1px;
+    /*underline thickness */
 }
- 
+
 /* Styling the icon*/
 #footer_lists ul li button .icon {
-    font-size: 20px; 
-    color: #000; 
+    font-size: 20px;
+    color: #000;
 }
- 
+
 /* Hover effect for the button */
 #footer_lists ul li button:hover .icon {
     transform: translateX(4px);
-    color: #555; 
+    color: #555;
 }
- 
+
 /* Styling the social icons section */
 #footer_socials {
     display: flex;
-    justify-content: flex-end; 
-    align-items: flex-start; 
-    margin-top: 20px; 
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 20px;
     width: 29%;
 }
- 
+
 #footer_socials ul {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; 
-    gap: 30px; 
+    width: 100%;
+    gap: 30px;
 }
- 
+
 #footer_socials ul li {
-    margin: 0 10px; 
+    margin: 0 10px;
     margin: 0;
 }
- 
+
 #footer_socials ul li a {
-    text-decoration: none; 
-    color: #000; 
-    font-size: 20px; 
-    transition: color 0.3s ease, transform 0.3s ease; 
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
- 
+
 #footer_socials ul li a:hover {
-    color: #555; 
-    transform: scale(1.2); 
+    color: #555;
+    transform: scale(1.2);
 }
+
+
+
+
+
 
 /* START OF STYLING FOR MARKETS PAGE */
 body {
@@ -811,19 +1466,24 @@ body {
     width: 60%;
     margin-top: 200px;
 }
+
 .asset-info {
     width: 70%;
     height: 500px;
+    padding-top: 150px;
 }
+
 .price {
     font-size: 24px;
     font-weight: bold;
 }
+
 .chart-container {
     width: 100%;
     height: 200px;
     margin: 30px 0;
 }
+
 .order-box {
     height: 500px;
     width: 50%;
@@ -832,15 +1492,18 @@ body {
     border-radius: 0;
     background: #fff;
 }
+
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 5px 0;
 }
+
 .bold {
     font-weight: bold;
 }
+
 button {
     padding: 8px 15px;
     border: none;
@@ -849,11 +1512,13 @@ button {
     border-radius: 3px;
     font-size: 14px;
 }
+
 .btn-container {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
 }
+
 .btn-container button {
     flex: 1;
     margin: 0 5px;
@@ -861,6 +1526,7 @@ button {
     font-size: 16px;
     font-weight: bold;
 }
+
 .large-btn {
     width: 100%;
     padding: 15px;
@@ -871,6 +1537,8 @@ button {
     font-size: 16px;
     font-weight: bold;
 }
+  
+
 footer {
     width: 100%;
     background: #f0f0f0;
@@ -878,6 +1546,7 @@ footer {
     margin-top: 20px;
     text-align: center;
 }
+
 .footer-links {
     display: flex;
     justify-content: space-around;
@@ -890,15 +1559,8 @@ footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 .nav-container {
     display: flex;
@@ -1026,7 +1688,6 @@ footer {
     padding-bottom: 10px;
     border-bottom: 3px solid rgba(0, 0, 139, 0.3);
     color: #00008B;
-    padding-top: 90px; 
 }
 
 .wireframe-grid {
@@ -1226,7 +1887,7 @@ footer {
     font-weight: bold;
 }
 
-/* NEWS PAGE SPECIFIC STYLES */
+/* ALSO NEWS PAGE SPECIFIC STYLES */
 .news-container {
     width: 100%;
     max-width: 1200px;
@@ -1538,204 +2199,20 @@ footer {
     color: #00008B;
     font-weight: bold;
 }
-/*careers*/
-/* Main Content Styles */
-.careers-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.careers-title {
-    font-size: 40px;
-    color: #2c2449;
-    margin-bottom: 40px;
-    padding-top: 100px;
-}
-
-.careers-content {
-    max-width: 800px;
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
-.careers-content p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-    line-height: 1.8;
-}
-
-.careers-image {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.careers-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
- /* Testimonials Section */
- /* Testimonials Section - New Layout */
- 
-
- .testimonials-section {
-     margin: 50px auto;
-     padding: 20px;
-     max-width: 1200px;
-     font-family: 'Roboto', sans-serif;
- }
- 
- .testimonials-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: flex-start;
-     flex-wrap: wrap;
- }
- 
- .testimonials-header h2 {
-     margin: 0;
-     font-size: 24px;
-     flex: 1;
-     min-width: 150px;
- }
- 
- .our-story-section {
-    max-width: 800px;
-    margin: 40px auto 20px;
-    padding: 0 20px;
-}
-
-.our-story-paragraph {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.our-story-link {
-    font-size: 10px;
-    font-weight: 50;
-    color: #000;
-    margin-top: 0;
-    text-align: left;
-}
- 
-.testimonial-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-top: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.testimonial-cards .card {
-    flex-shrink: 0;
-    width: 120px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.testimonial-cards .card img {
-    width: 100%;
-    height: 120px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    object-fit: cover;
-}
-
-.card-text {
-    font-size: 0.9rem;
-    margin-top: 8px;
-    opacity: 1;
-    transform: translateY(0);
-    transition: color 0.3s ease;
-}
 
 
-.card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.card:hover .card-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
- 
- /*apply section*/
-
-.apply-section {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.apply-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.apply-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.name-fields {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-}
-
-.name-fields input {
-    flex: 1;
-}
-
-.apply-form input {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.apply-form button {
-    padding: 12px;
-    border: 1px solid #000;
-    background-color: white;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.apply-form button:hover {
-    background-color: #f0f0f0;
-}
 
 
- 
+
+
+
+
 
 /*START OF STYLING IN SIGN IN*/
 
 
 
-/* Main Content Wrapper */
+/* Main Content Wrapper (SIGN IN ONLY) */
 .main-wrapper {
     display: flex;
     flex-direction: column;
@@ -1760,7 +2237,7 @@ footer {
 }
 
 /* Form Styles - Specific to form-section */
-.form-section h1 { /* Modified for specificity */
+.form-section h1 {
     font-size: 32px;
     margin-bottom: 30px;
     color: #2c3e50;
@@ -1789,7 +2266,7 @@ label {
     padding-left: 15px;
 }
 
-.form-section input { /* Modified for specificity */
+.form-section input {
     width: 100%;
     padding: 15px 25px;
     border: 2px solid #ddd;
@@ -1799,7 +2276,7 @@ label {
     background-color: #f9f9f9;
 }
 
-.form-section input:focus { /* Modified for specificity */
+.form-section input:focus {
     border-color: #4ca1af;
     box-shadow: 0 0 0 3px rgba(76, 161, 175, 0.2);
     outline: none;
@@ -1811,16 +2288,16 @@ form button[type="submit"] {
     background-color: #2c3e50;
     color: white;
     border: none;
-    padding: 12px 20px; /* Reduced padding to make button smaller */
-    font-size: 14px; /* Smaller font size */
+    padding: 12px 20px;
+    font-size: 14px;
     border-radius: 30px;
     cursor: pointer;
-    width: 50%; /* Made button narrower */
+    width: 50%;
     font-weight: 500;
     transition: all 0.3s;
-    margin: 10px auto 0; /* Centered the button */
+    margin: 10px auto 0;
     letter-spacing: 0.5px;
-    display: block; /* Needed for margin auto to work */
+    display: block;
 }
 
 form button[type="submit"]:hover {
@@ -1916,7 +2393,8 @@ form button[type="submit"]:hover {
         flex-direction: column;
     }
 
-    .form-section, .image-section {
+    .form-section,
+    .image-section {
         border-radius: 0;
     }
 
@@ -1924,7 +2402,8 @@ form button[type="submit"]:hover {
         padding: 60px 20px;
     }
 
-    .form-section input { /* Modified for specificity */
+    .form-section input {
+    
         padding: 12px 20px;
     }
 
@@ -1934,7 +2413,557 @@ form button[type="submit"]:hover {
     }
 
     form button[type="submit"] {
-        width: 100%; /* Full width on mobile */
+        width: 100%;
+        /* Full width on mobile */
     }
 }
-/* --- End of styles extracted and modified for pasting --- */
+
+/* BLINKING DOT IN THE HOME PAGE*/
+
+#companyName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* space between h3 and the dot */
+}
+
+#companyName h4 {
+    color: rgba(0, 21, 56, 0.8);
+}
+
+
+.blinking-dot {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    min-width: 20px;
+
+}
+
+.blinking-dot::before {
+    content: "";
+    position: absolute;
+    background-color: #0026ff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: glow-and-fade 2s ease-in-out infinite;
+}
+
+.blinking-dot::after {
+    content: "";
+    position: absolute;
+    background-color: #0026ff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: grow 2s ease-in-out infinite;
+}
+
+/* works through trial and error, and some tutorials*/
+@keyframes grow {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes glow-and-fade {
+    0% {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    75% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.75);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+/*START OF CSS FOR INSIGHTS.HTML*/
+
+#expert-analysis
+{
+white-space: nowrap;
+opacity: 0.9;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+z-index: -1;
+position: absolute;
+inset: 0;
+margin: 0;
+padding-left: 20px;
+filter: blur(2px); /*might change later, but no need for blur now*/
+}
+.landing-section
+{
+background-color: rgba(255, 255, 255, 0.856);
+border-radius: 3px;
+color: #001538;
+margin-top: 0;
+margin-left: 3%;
+margin-bottom: 50px;
+padding-bottom: 15px;
+padding-left: 35px;
+text-align: left;
+max-width: 40%;
+}
+
+.landing-section h3
+{
+font-size: 380%;
+font-weight: 10;   
+}
+
+.landing-section p
+{
+line-height: 32px;
+font-size: 20px;
+margin-top: 3%;
+font-weight: 1;
+max-width: 70%;
+padding-bottom: 20px;
+color: #041c44;
+}
+
+#email-insight
+{
+gap: 12px;
+position:relative;
+transition-duration: 0.5s;
+color: #fff;
+background-color: #001538;
+text-decoration: none;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: 14px 26px;
+gap: 8px;
+border-radius: 50px;
+cursor: pointer;
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+}
+
+#insight-impact
+{
+position: relative;
+color: #001538;
+background-color: #faf8f5;
+padding-bottom: 10px;
+}
+
+#insight-impact h2
+{
+padding-top: 50px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#insight-impact h3
+{
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#insight-impact p 
+{
+line-height: 32px;
+font-size: 20px;
+margin-top: 3%;
+margin-left: 1.5%;
+font-weight: 1;
+padding-bottom: 20px;
+color: #041c44;
+}
+
+
+#insights
+{
+position: relative;
+color: #001538;
+background-color: #faf8f5;
+padding-bottom: 10px;
+}
+
+#insights h2
+{
+padding-top: 50px;
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#insights h3
+{
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#insights p 
+{
+line-height: 32px;
+font-size: 20px;
+margin-top: 3%;
+margin-left: 1.5%;
+font-weight: 1;
+padding-bottom: 20px;
+color: #041c44;
+}
+
+
+#prev-recommendations
+{
+background-color: #F8F8FF;
+color: #041c44;
+margin-top: 0;
+padding-left: 35px;
+padding-top: 50px;
+text-align: left; 
+}
+
+#prev-recommendations h1
+{
+margin-bottom: 100px;
+margin-left: 1.5%;
+font-weight: 200;
+font-size: 250%;
+}
+
+#prev-recommendations h2
+{
+margin-left: 1.5%;
+font-weight: 400;
+font-size: 250%;
+}
+
+#prev-recommendations a
+{
+margin-left: 1.5%;
+color: #041c44;
+line-height: 48px;
+font-weight: 10;
+font-size: 180%;
+max-width: 50%;
+}
+
+.link-list
+{
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+border-top: 1px solid rgba(0, 0, 0, 0);
+}
+
+.link-list a
+{
+display: block;
+text-decoration: none;
+display: flex;
+flex-flow: row wrap;
+align-items: center;
+gap: 12px;
+position: relative;
+padding: 20px 28px 20px 20px;
+text-decoration: none;
+color: inherit;
+margin-right: 20px;
+margin-top: 20px;
+border-bottom: none;
+font-size: 24px;
+font-style: normal;
+white-space: nowrap;
+}
+
+.insight-link .material-symbols-outlined
+{
+position: absolute;
+left: 1200px;
+font-size: 150%;
+}
+.insight-link:hover .material-symbols-outlined
+{
+transform: translateX(4px);
+opacity: 0.4;
+}
+
+
+.card-container
+{
+width: 90%;
+margin: 50px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 20px;
+padding: 20px;
+}
+
+.card
+{
+background-color: #fff;
+border-radius: 8px;
+flex: 1;
+min-width: 200px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+cursor: pointer;
+}
+
+.card img
+{
+width: 100%;
+height: auto;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+margin-bottom: 10px;
+transition-duration: 0.8s;
+}
+
+.card-content
+{
+padding: 15px;
+}
+
+.card-content h3
+{
+font-size: 15px;
+margin-bottom: 10px;
+color: #001538;
+}
+
+.card-content p
+{
+font-size: 14px;
+color: #041c44;
+line-height: 1.3px;
+}
+
+.card:hover img
+{
+transform: translateY(-10px);
+}
+
+table {
+border-collapse: collapse;
+width: 100%;
+  }
+  
+  td, th {
+border: 1px solid #ffe1face;
+text-align: left;
+padding: 10px;
+white-space: nowrap;
+  }
+
+  table .material-symbols-outlined
+  {
+color: rgba(136, 8, 8, 0.822);
+  }
+
+  #crypto-table .material-symbols-outlined
+{
+color: #306b1cc5;
+}
+
+/*START OF CSS USED IN ENTERPRISE.HTML*/
+/*Attempt to make form */
+
+#form-wrapper .form-container
+{
+position: relative;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+background-color: #F8F8FF;
+border-radius: 0.5rem;
+box-shadow: 0 0 1rem 0 rgba(0 0 0 / 0.2);
+padding-top: 120px;
+}
+#form-wrapper .form-container form .form-group-singular
+{
+   padding: 0 19rem;
+   padding-bottom: 32px;
+}
+#form-wrapper .form-container form .form-group-row
+{
+display: flex;
+width: 100%;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+#form-wrapper .form-container form h2
+{
+font-size: 320%;
+text-align: center;
+text-transform: capitalize;
+font-weight: 450;
+color:#041c44
+}
+
+#form-wrapper .form-container form .form-group 
+{
+position: relative;
+width: 32rem;
+margin: 23px 0;
+}
+
+#form-wrapper .form-container form .form-group i,
+#form-wrapper .form-container form .form-group label
+{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 1.6rem;
+text-transform: capitalize;
+color:#041c44;
+padding: 0 0.5rem;
+pointer-events: none;
+transition: all 0.5s ease;
+}
+#form-wrapper .form-container form .form-group i
+{
+left: 0.5rem;
+}
+#form-wrapper .form-container form .form-group label
+{
+left: 2.5rem;
+}
+
+#form-wrapper .form-container form .form-group input
+{
+width: 100%;
+height: 4rem;
+padding: 0 1rem;
+border-radius: 0.5rem;    
+border: none;
+outline: none;
+border: 0.1rem solid #041c44;
+font-size: 1.6rem;
+color: #041c44;
+background: transparent;
+}
+
+form .form-group input:focus~label,
+form .form-group input:valid~label,
+form .form-group input:focus~i,
+form .form-group input:valid~i
+{
+top: 0 !important;
+font-size: 1.2rem !important;
+background-color: aliceblue;
+}
+
+#form-wrapper .form-container form .link a:hover
+{
+color:#031638b4;
+}
+
+#form-wrapper .form-container form .collab-btn
+{
+background: #0015389f;
+color:#fff;
+text-transform: capitalize;
+width: 100%;
+height: 4rem;
+font-size: 1.6rem;
+font-weight: 350;
+outline: none;
+border: none;
+border-radius: 32px;
+cursor: pointer;
+transition-duration: 0.5s;
+}
+
+#form-wrapper .form-container form .collab-btn:hover
+{
+background: #001538;  
+}
+
+#form-wrapper .form-container form .link
+{
+text-align: center;
+font-size: 1.4rem;
+color:#041c44;
+margin: 2rem 0; 
+}
+
+#form-wrapper .form-container form .link a
+{
+text-transform: capitalize;
+color:#041c44;
+text-decoration: none;
+font-weight: 350;
+transition: all 0.5s ease;
+}
+
+#our-vision
+{
+opacity: 0.9;
+background-position: center;
+z-index: -1;
+position: absolute;
+inset: 0;
+filter: blur(2px); /*might change later, but no need for blur now*/
+}
+
+.landing-section-enterprise
+{
+background-color: rgba(255, 255, 255, 0.856);
+border-radius: 9px;
+color: #001538;
+margin-top: 0;
+margin-left: 3%;
+margin-bottom: 100px;
+padding-bottom: 15px;
+padding-left: 35px;
+text-align: left;
+max-width: 40%;
+}
+
+.landing-section-enterprise h3
+{
+font-size: 380%;
+font-weight: 10;   
+}
+
+.landing-section-enterprise p
+{
+line-height: 32px;
+font-size: 20px;
+margin-top: 3%;
+font-weight: 1;
+max-width: 70%;
+padding-bottom: 20px;
+color: #041c44;
+}
