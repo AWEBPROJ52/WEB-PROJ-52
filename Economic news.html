@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Page</title>
+    <!-- Linking material fonts (symbols) from google -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <!-- Lines 10 to 12 are linking the Roboto font. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href = "style.css" rel = "stylesheet" type = text/css>
+    
+    
+     <!-- Linking material fonts (symbols) from font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+        <div id = "nav_menu">
+        
+         <!--LOGO-->
+            <div id="logo">
+                 <a href="HOME.HTML" class="link-area"><img src="media/MISC/logo.png" alt="Company Logo" class="logo" height="150" width="150"></a>
+            </div>
+            <div id = "nav_items">
+                <ul>
+                <li><button class="search_button">
+                    <span class="material-symbols-outlined">search</span>
+                    <span class="text">Search</span>
+                    </button>
+                </li>
+                <li><button class="signin_button">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text">Sign in</span>
+                    </button>
+                </li>
+                <li class="vertical_line"></li>
+
+                <li><button class="menu_button">
+                    <span class="material-symbols-outlined">menu</span>
+                    <span class="text">Menu</span>
+                    </button>
+                </ul>
+             </div>
+        
+        </div>
+
+
+    
+    </nav>
+
+
+        
+    </header>
+
+
+
+    <div class="slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="media/Economic news/2023-07-16T000000Z_1624445035_MT1IMGOST000AKBG96_RTRMADP_3_IMAGO-IMAGES-1.webp" alt="Slide 1">
+          <div class="caption">
+            <h2>Changing Tastes: How Society Shapes Us</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="media/Economic news/1667239.jpg" alt="Slide 2">
+          <div class="caption">
+            <h2>Best Marketing Strategies in 2025</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="media/Economic news/newspaper-on-wooden-desk-economic-260nw-435859006.webp" alt="Slide 3">
+          <div class="caption">
+            <h2>Discover the World: Travel Trends</h2>
+          </div>
+        </div>
+      </div>
+    
+      <div class="navigation">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+      </div>
+    </div>
+    
+    <script>
+      const slides = document.querySelectorAll('.slide');
+      const prev = document.querySelector('.prev');
+      const next = document.querySelector('.next');
+      let currentSlide = 0;
+    
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+      }
+    
+      prev.addEventListener('click', () => {
+        currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+      });
+    
+      next.addEventListener('click', () => {
+        currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+        showSlide(currentSlide);
+      });
+    </script>
+    
+    
+    
+
+
+
+
+  <!-- Main Navigation -->
+
+
+  <!-- Featured News Grid -->
+ 
+  <section class="featured">
+    <div class="card">
+      <img src="media/Economic news/crucial-small-business-departments-need-to-succeed.webp" alt="https://translate.google.com/?sl=ar&tl=en&text=%D8%A7%D8%B2%D8%A7%D9%8A%20%D8%A7%D8%B6%D9%8A%D9%81%20%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA%20&op=translate">
+      <div class="card-content">
+        <span class="tag business">Business</span>
+        <h4>3 Things You Can Do to Get Your Customers Talking</h4>
+        <small>By PENGAR</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/Economic news/11111111LYNXMPEL3Q047_L.jpg" alt="">
+      <div class="card-content">
+        <span class="tag world">Business</span>
+        <h4>IMF-World Bank meetings end with little tariff clarity, but economic foreboding</h4>
+        <small>By PENGAR</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/Economic news/003LYNXMPEL3Q068_L.jpg" alt="">
+      <div class="card-content">
+        <span class="tag world">World</span>
+        <h4>Saudi Arabia, Qatar to settle Syria outstanding arrears of around $15 million to World Bank</h4>
+        <small>By PENGAR </small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/Economic news/ca0c95cb506660e05ea3973da3e7de85.jpg" alt="">
+      <div class="card-content">
+        <span class="tag world">World</span>
+        <h4>Beautiful Seaside Locations to Visit This Summer</h4>
+        <small>By PENGAR</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/Economic news/p0jd9w3c.jpg.webp" alt="">
+      <div class="card-content">
+        <span class="tag lifestyle">Lifestyle</span>
+        <h4>Why 'doing nothing, intentionally' is good for us: The rise of the slow living movement</h4>
+        <small>By PENGAR</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="media/Economic news/ap25084061551697.webp" alt="">
+      <div class="card-content">
+        <span class="tag fashion">Fashion</span>
+        <h4>Look of the Week: Naomi Watts is twinning with her canine co-star </h4>
+        <small>By PENGAR</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <div class="left">
+      <div class="section-title">Latest News</div>
+      <div class="post">
+        <img src="media/Economic news/Tips-to-make-a-great-presentation_1200x627.jpg" alt="">
+        <div>
+          <h5>How to Improve Your Presentation Skills</h5>
+          <small>PENGAR</small>
+        </div>
+      </div>
+      <div class="post">
+        <img src="media/Economic news/How-to-Start-Your-Own-Business-in-South-Africa-15-Key-Steps.jpg" alt="">
+        <div>
+          <h5>New Tech Gadgets You Need to See</h5>
+          <small>PENGAR</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="section-title">Popular Posts</div>
+      <div class="post">
+        <img src="media/Economic news/1743632546a0a6834160eda5aeb2113d631156337997ff466c.jpeg" alt="">
+        <div>
+          <h5>Follow These Smartphone Habits</h5>
+          <small>PENGAR</small>
+        </div>
+      </div>
+      <div class="post">
+        <img src="media/Economic news/20180108155124-GettyImages-536908019.jpeg" alt="">
+        <div>
+          <h5>These 12 Bad Habits If You're Serious About...</h5>
+          <small>PENGAR</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div id="logo_footer">
+        <img src="media/MISC/logo.png" alt="Company Logo" class="logo" height = 200 width = 200>
+    </div>
+
+    <div id="footer_lists">
+        <!-- Trading Section -->
+        <div id="footer_list1">
+            <h3>Trading</h3>
+            <ul>
+                <li>
+                    <button onclick="location.href='MARKETS.HTML'">
+                        <span class="text">Markets</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='INSIGHTS.HTML'">
+                        <span class="text">Insights</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='BROKERAGE.HTML'">
+                        <span class="text">Brokerage</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- News Section -->
+        <div id="footer_list2">
+            <h3>News</h3>
+            <ul>
+                <li>
+                    <button onclick="location.href='ECONOMIC.HTML'">
+                        <span class="text">Economic</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='BUSINESS.HTML'">
+                        <span class="text">Business</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='CORPORATE.HTML'">
+                        <span class="text">Corporate</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Wealth Management Section -->
+        <div id="footer_list3">
+            <h3>Wealth Management</h3>
+            <ul>
+                <li>
+                    <button onclick="location.href='PERSONAL.HTML'">
+                        <span class="text">Personal</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='ENTERPRISE.HTML'">
+                        <span class="text">Enterprise</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- About Us Section -->
+        <div id="footer_list4">
+            <h3>About us</h3>
+            <ul>
+                <li>
+                    <button onclick="location.href='OUR_STORY.HTML'">
+                        <span class="text">Our story</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='CAREERS.HTML'">
+                        <span class="text">Careers</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="footer_list5">
+            <h3>Contact us</h3>
+            <ul>
+                <li>
+                    <button onclick="location.href='INQUIRIES.HTML'">
+                        <span class="text">Inquiries</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href='HELP.HTML'">
+                        <span class="text">Help & FAQ</span>
+                        <span class="icon material-symbols-outlined">chevron_right</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer_socials">
+      <ul>
+
+          <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+
+    </ul>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
